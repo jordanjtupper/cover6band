@@ -445,7 +445,7 @@ ul { list-style: none; }
 /* ── VIDEOS ── */
 .videos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .video-wrap {
@@ -462,52 +462,6 @@ ul { list-style: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-/* ── PHOTOS ── */
-.photos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 280px);
-  gap: 0.75rem;
-}
-.photo-item {
-  position: relative;
-  overflow: hidden;
-}
-.photo-item--large {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-}
-.photo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(40%);
-  transition: filter 0.4s, transform 0.5s;
-}
-.photo-item:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.06);
-}
-.photo-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%);
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.photo-item:hover .photo-overlay { opacity: 1; }
-.photo-overlay span {
-  font-family: var(--font-cond);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--red);
 }
 
 /* ── BOOKING ── */
@@ -772,6 +726,24 @@ ul { list-style: none; }
   transition: color 0.2s;
 }
 .footer-network a:hover { color: var(--red); }
+
+
+/* ── SOCIAL FEED ── */
+.social { background: var(--black); }
+.social-feed-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  min-height: 620px;
+}
+.social-feed-wrap .fb-page {
+  border: 1px solid #1e1e1e;
+  max-width: 500px;
+  width: 100%;
+}
+.social-fb-link {
+  text-align: center;
+}
 
 </style>
 
@@ -1060,6 +1032,47 @@ ul { list-style: none; }
     "paymentAccepted": "Cash, Check, Electronic Transfer"
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Cover 6 Band Live Performance Videos",
+    "description": "Live performance videos featuring Cover 6 Band — Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums. Baton Rouge Louisiana cover band.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://www.youtube.com/watch?v=NK4ik3AuEKk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://www.youtube.com/watch?v=VqCDIThWpRk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://www.youtube.com/watch?v=wTTwGUUn_Xg"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://www.youtube.com/watch?v=Z2GKvMR4394"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://www.youtube.com/watch?v=kI4KoQ8hM-M"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://www.youtube.com/watch?v=Ia51PZuwa-U"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1074,7 +1087,7 @@ ul { list-style: none; }
         <li><a href="#about">About</a></li>
         <li><a href="#band">The Band</a></li>
         <li><a href="#videos">Videos</a></li>
-        <li><a href="#photos">Photos</a></li>
+        <li><a href="#social">Social</a></li>
         <li><a href="#book" class="nav-cta">Book Us</a></li>
       </ul>
     </div>
@@ -1214,84 +1227,50 @@ ul { list-style: none; }
         <h2 class="section-title">See Us <span class="red">Live</span></h2>
       </div>
       <div class="videos-grid">
-        <!-- Replace VIDEO_ID_1 through VIDEO_ID_4 with actual YouTube video IDs -->
         <div class="video-wrap reveal">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_1"
-            title="Cover 6 Band Live Performance 1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/NK4ik3AuEKk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="video-wrap reveal">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_2"
-            title="Cover 6 Band Live Performance 2"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/VqCDIThWpRk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="video-wrap reveal">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_3"
-            title="Cover 6 Band Live Performance 3"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/wTTwGUUn_Xg" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="video-wrap reveal">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_4"
-            title="Cover 6 Band Live Performance 4"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/Z2GKvMR4394" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap reveal">
+          <iframe src="https://www.youtube.com/embed/kI4KoQ8hM-M" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-wrap reveal">
+          <iframe src="https://www.youtube.com/embed/Ia51PZuwa-U" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PHOTOS -->
-  <section id="photos" class="photos section section--dark">
+  <!-- SOCIAL FEED -->
+  <section id="social" class="social section">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-label">Gallery</p>
-        <h2 class="section-title">On <span class="red">Stage</span></h2>
+        <p class="section-label">Follow Along</p>
+        <h2 class="section-title">Find Us on <span class="red">Facebook</span></h2>
       </div>
-      <div class="photos-grid">
-        <!-- Replace with your actual photo filenames -->
-        <div class="photo-item reveal photo-item--large">
-          <img src="/cover6band/images/photo-1.jpg" alt="Cover 6 Band performing live" loading="lazy" />
-          <div class="photo-overlay"><span>Cover 6 Live</span></div>
+      <div class="social-feed-wrap reveal">
+        <div class="fb-page"
+          data-href="https://www.facebook.com/profile.php?id=61586946814825"
+          data-tabs="timeline"
+          data-width="500"
+          data-height="600"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true">
         </div>
-        <div class="photo-item reveal">
-          <img src="/cover6band/images/photo-2.jpg" alt="Cover 6 Band on stage at a live music event in Louisiana" loading="lazy" />
-          <div class="photo-overlay"><span>On Stage</span></div>
-        </div>
-        <div class="photo-item reveal">
-          <img src="/cover6band/images/photo-3.jpg" alt="Cover 6 Band live performance, Baton Rouge area cover band" loading="lazy" />
-          <div class="photo-overlay"><span>The Groove</span></div>
-        </div>
-        <div class="photo-item reveal">
-          <img src="/cover6band/images/photo-4.jpg" alt="Crowd enjoying Cover 6 Band live music performance in Baton Rouge" loading="lazy" />
-          <div class="photo-overlay"><span>The Crowd</span></div>
-        </div>
-        <div class="photo-item reveal">
-          <img src="/cover6band/images/photo-5.jpg" alt="Cover 6 Band rocking out, Jordan Tupper on bass, Baton Rouge Louisiana" loading="lazy" />
-          <div class="photo-overlay"><span>Rock &amp; Roll</span></div>
-        </div>
-        <div class="photo-item reveal">
-          <img src="/cover6band/images/photo-6.jpg" alt="Cover 6 Band full group photo — Jordan Tupper, David Martin, Sam Jeter, Nick Fehn, Coty" loading="lazy" />
-          <div class="photo-overlay"><span>The Full Six</span></div>
-        </div>
+      </div>
+      <div class="social-fb-link reveal">
+        <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+          View on Facebook
+        </a>
       </div>
     </div>
   </section>
@@ -1407,6 +1386,14 @@ ul { list-style: none; }
       <p class="footer-copy">&copy; <span id="year"></span> Cover 6 Band. All rights reserved.</p>
     </div>
   </footer>
+
+  
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
+    nonce="cover6fb">
+  </script>
 
   <script>
 // ── NAV SCROLL ──
