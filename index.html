@@ -323,7 +323,7 @@ ul { list-style: none; }
 /* ── ABOUT ── */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 5rem;
   align-items: center;
 }
@@ -352,24 +352,9 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: var(--white-dim);
 }
-.about-img-frame {
-  position: relative;
-}
-.about-img-frame img {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  filter: grayscale(30%);
-}
-.about-img-accent {
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-  width: 60%;
-  height: 60%;
-  border: 3px solid var(--red);
-  z-index: -1;
-}
+
+
+
 
 /* ── BAND MEMBERS ── */
 .members-grid {
@@ -610,7 +595,7 @@ ul { list-style: none; }
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .members-grid { grid-template-columns: repeat(3, 1fr); }
-  .about-grid { gap: 3rem; }
+  
 }
 
 @media (max-width: 768px) {
@@ -630,7 +615,7 @@ ul { list-style: none; }
   .nav-cta { text-align: center; clip-path: none; }
 
   .about-grid { grid-template-columns: 1fr; }
-  .about-img-frame { display: none; }
+  
 
   .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
@@ -731,6 +716,105 @@ ul { list-style: none; }
 .footer-logo-img {
   mix-blend-mode: screen;
   background: transparent;
+}
+
+
+/* ── GIG CALENDAR ── */
+.gigs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #222;
+}
+.gig-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #1e1e1e;
+  transition: background 0.2s;
+}
+.gig-row:hover {
+  background: rgba(224,26,26,0.04);
+}
+.gig-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--black-soft);
+  border-left: 3px solid var(--red);
+  padding: 0.6rem 0.75rem;
+  min-width: 80px;
+}
+.gig-month {
+  font-family: var(--font-cond);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.gig-day {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--white);
+}
+.gig-year {
+  font-family: var(--font-cond);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+.gig-venue {
+  font-family: var(--font-cond);
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+.gig-location {
+  font-family: var(--font-cond);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 0.2rem;
+}
+.gig-details {
+  font-size: 0.82rem;
+  color: #555;
+  font-family: var(--font-cond);
+  letter-spacing: 0.08em;
+}
+.gig-action { flex-shrink: 0; }
+.gigs-empty {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  font-family: var(--font-cond);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #555;
+  display: none; /* hidden by default — show if no gig rows exist */
+}
+.gigs-empty a { color: var(--red); text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .gig-row {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+  .gig-action {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .gig-date { min-width: 60px; }
+  .gig-day { font-size: 2rem; }
 }
 
 </style>
@@ -1073,6 +1157,7 @@ ul { list-style: none; }
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
+        <li><a href="#gigs">Gigs</a></li>
         <li><a href="#band">The Band</a></li>
         <li><a href="#videos">Videos</a></li>
         <li><a href="#social">Social</a></li>
@@ -1126,13 +1211,190 @@ ul { list-style: none; }
             </div>
           </div>
         </div>
-        <div class="about-image reveal reveal--right">
-          <div class="about-img-frame">
-            <img src="/cover6band/images/about.jpg" alt="Cover 6 Band performing live in Baton Rouge Louisiana" loading="lazy" />
-            <div class="about-img-accent"></div>
-          </div>
+        </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- GIG CALENDAR -->
+  <section id="gigs" class="gigs section section--dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Catch Us Live</p>
+        <h2 class="section-title">Upcoming <span class="red">Gigs</span></h2>
+      </div>
+      <div class="gigs-list">
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">JUN</span>
+            <span class="gig-day">05</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Papi's</h3>
+            <p class="gig-location">Baton Rouge, LA</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">JUN</span>
+            <span class="gig-day">20</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Reno's on the River</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">3pm – 6pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">JUL</span>
+            <span class="gig-day">18</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Big J's Side Porch</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">JUL</span>
+            <span class="gig-day">31</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Locals</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">8:30pm – 12:30am</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">01</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Tequila's</h3>
+            <p class="gig-location">Denham Springs, LA</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">08</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Sun Outdoors RV Resort</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">TBA</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">15</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Tequila's</h3>
+            <p class="gig-location">Zachary, LA</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">22</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Victoria's</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">29</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Big J's Side Porch</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">6pm – 9pm</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <div class="gig-row reveal">
+          <div class="gig-date">
+            <span class="gig-month">SEP</span>
+            <span class="gig-day">18</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Ragon's</h3>
+            <p class="gig-location">Clinton, LA</p>
+            <p class="gig-details">8pm – 12am</p>
+          </div>
+          <div class="gig-action">
+            <a href="#book" class="btn btn--red">Book Inquiry</a>
+          </div>
+        </div>
+
+        <!-- PASTE NEW GIG ROWS ABOVE THIS LINE -->
+
+      </div>
+
+      <div class="gigs-empty reveal" style="display:none">
+        <!-- Shown when no gigs are listed — remove this block once gigs are added -->
+        <p>Gig calendar coming soon — <a href="#book">contact us</a> to book Cover 6 for your event.</p>
+      </div>
+
     </div>
   </section>
 
