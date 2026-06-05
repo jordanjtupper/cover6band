@@ -721,18 +721,20 @@ ul { list-style: none; }
 
 /* ── GIG CALENDAR ── */
 .gigs-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-top: 1px solid #222;
+  border-left: 1px solid #222;
 }
 .gig-row {
   display: grid;
   grid-template-columns: 90px 1fr;
   align-items: center;
   gap: 1.25rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid #1e1e1e;
+  padding: 0.85rem 1rem;
+  border-right: 1px solid #222;
+  border-bottom: 1px solid #222;
   transition: background 0.2s;
 }
 .gig-row:hover {
@@ -803,10 +805,15 @@ ul { list-style: none; }
 }
 .gigs-empty a { color: var(--red); text-decoration: underline; }
 
+@media (max-width: 900px) {
+  .gigs-list { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 600px) {
+  .gigs-list { grid-template-columns: 1fr; border-left: none; }
   .gig-row {
     grid-template-columns: 70px 1fr;
     gap: 1rem;
+    border-right: none;
   }
   .gig-date { min-width: 60px; }
   .gig-day { font-size: 2rem; }
