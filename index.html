@@ -728,7 +728,7 @@ ul { list-style: none; }
 }
 .gig-row {
   display: grid;
-  grid-template-columns: 100px 1fr auto;
+  grid-template-columns: 100px 1fr;
   align-items: center;
   gap: 2rem;
   padding: 1.5rem 0;
@@ -791,7 +791,7 @@ ul { list-style: none; }
   font-family: var(--font-cond);
   letter-spacing: 0.08em;
 }
-.gig-action { flex-shrink: 0; }
+
 .gigs-empty {
   text-align: center;
   padding: 3rem 0 1rem;
@@ -806,16 +806,27 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .gig-row {
     grid-template-columns: 70px 1fr;
-    grid-template-rows: auto auto;
     gap: 1rem;
-  }
-  .gig-action {
-    grid-column: 2;
-    grid-row: 2;
   }
   .gig-date { min-width: 60px; }
   .gig-day { font-size: 2rem; }
 }
+
+
+.gigs-cta {
+  text-align: center;
+  padding: 2.5rem 0 0;
+  font-family: var(--font-cond);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--white-dim);
+}
+.gigs-cta a {
+  color: var(--red);
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+.gigs-cta a:hover { opacity: 0.75; }
 
 </style>
 
@@ -1145,6 +1156,14 @@ ul { list-style: none; }
     ]
   }
   </script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR4MR0K9W1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CR4MR0K9W1');
+  </script>
 </head>
 <body>
 
@@ -1237,9 +1256,6 @@ ul { list-style: none; }
             <p class="gig-location">Baton Rouge, LA</p>
             <p class="gig-details">6pm – 9pm</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <div class="gig-row reveal">
@@ -1253,9 +1269,6 @@ ul { list-style: none; }
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">3pm – 6pm</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <div class="gig-row reveal">
@@ -1268,9 +1281,6 @@ ul { list-style: none; }
             <h3 class="gig-venue">Big J's Side Porch</h3>
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">6pm – 9pm</p>
-          </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
           </div>
         </div>
 
@@ -1285,9 +1295,6 @@ ul { list-style: none; }
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">8:30pm – 12:30am</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <div class="gig-row reveal">
@@ -1300,9 +1307,6 @@ ul { list-style: none; }
             <h3 class="gig-venue">Tequila's</h3>
             <p class="gig-location">Denham Springs, LA</p>
             <p class="gig-details">6pm – 9pm</p>
-          </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
           </div>
         </div>
 
@@ -1317,9 +1321,6 @@ ul { list-style: none; }
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">TBA</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <div class="gig-row reveal">
@@ -1332,9 +1333,6 @@ ul { list-style: none; }
             <h3 class="gig-venue">Tequila's</h3>
             <p class="gig-location">Zachary, LA</p>
             <p class="gig-details">6pm – 9pm</p>
-          </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
           </div>
         </div>
 
@@ -1349,9 +1347,6 @@ ul { list-style: none; }
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">6pm – 9pm</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <div class="gig-row reveal">
@@ -1364,9 +1359,6 @@ ul { list-style: none; }
             <h3 class="gig-venue">Big J's Side Porch</h3>
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">6pm – 9pm</p>
-          </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
           </div>
         </div>
 
@@ -1381,18 +1373,14 @@ ul { list-style: none; }
             <p class="gig-location">Clinton, LA</p>
             <p class="gig-details">8pm – 12am</p>
           </div>
-          <div class="gig-action">
-            <a href="#book" class="btn btn--red">Book Inquiry</a>
-          </div>
         </div>
 
         <!-- PASTE NEW GIG ROWS ABOVE THIS LINE -->
 
       </div>
 
-      <div class="gigs-empty reveal" style="display:none">
-        <!-- Shown when no gigs are listed — remove this block once gigs are added -->
-        <p>Gig calendar coming soon — <a href="#book">contact us</a> to book Cover 6 for your event.</p>
+      <div class="gigs-cta reveal">
+        <p>Want Cover 6 at your event? <a href="#book">Book Us &rarr;</a></p>
       </div>
 
     </div>
