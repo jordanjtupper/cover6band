@@ -267,29 +267,9 @@ ul { list-style: none; }
   animation: fadeUp 0.8s 0.5s ease both;
 }
 
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 2;
-}
-.hero-scroll-hint span {
-  font-family: var(--font-cond);
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: var(--white-dim);
-}
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--red), transparent);
-  animation: scrollPulse 1.8s ease-in-out infinite;
-}
+
+
+
 
 /* ── BUTTONS ── */
 .btn {
@@ -623,8 +603,7 @@ ul { list-style: none; }
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+
   50%       { opacity: 1;   transform: scaleY(1.15); }
 }
 
@@ -743,6 +722,15 @@ ul { list-style: none; }
 }
 .social-fb-link {
   text-align: center;
+}
+
+
+/* ── LOGO BLEND FIX ── */
+.hero-logo-img img,
+.nav-logo-img,
+.footer-logo-img {
+  mix-blend-mode: screen;
+  background: transparent;
 }
 
 </style>
@@ -1111,10 +1099,7 @@ ul { list-style: none; }
         <a href="#videos" class="btn btn--outline">Watch Us Play</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>SCROLL</span>
-      <div class="scroll-line"></div>
-    </div>
+  </div>
   </section>
 
   <!-- ABOUT -->
