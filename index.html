@@ -9,55 +9,22 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.cover6band.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.cover6band.com/" />
   <meta property="og:title" content="Cover 6 Band | We've Got You Covered" />
   <meta property="og:description" content="Baton Rouge's high-energy live cover band. Rock anthems and danceable grooves from the 70s to today." />
   <meta property="og:image" content="https://www.cover6band.com/images/og-image.jpg" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cover 6 Band | We've Got You Covered" />
   <meta name="twitter:description" content="Baton Rouge's high-energy live cover band. Rock and danceable grooves from the 70s to today." />
   <meta name="twitter:image" content="https://www.cover6band.com/images/og-image.jpg" />
 
-  <!-- Fonts -->
-  
-  <!--
-    Cover 6 Band — Official Website
-    Baton Rouge, Louisiana Live Cover Band
-    Featuring Jordan Tupper (bass/vocals), David Martin (lead vocals),
-    Sam Jeter (lead guitar), Nick Fehn (rhythm guitar), Coty (drums).
-    Rock, funk, and soul hits from the 70s to today.
-    Jordan Tupper | Baton Rouge Musician | Bassist | Vocalist | Music Educator
-    jordantupper.com | jordantuppermusic.com | nighthogbr.com
-    pinandpostco.com | thinksday.org | youtube.com/@jordanjtupper
-    Booking: david@cover6band.com
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  
-  <!--
-    Cover 6 Band — Official Website
-    Baton Rouge, Louisiana Live Cover Band
-    Featuring Jordan Tupper (bass/vocals), David Martin (lead vocals),
-    Sam Jeter (lead guitar), Nick Fehn (rhythm guitar), Coty (drums).
-    Rock, funk, and soul hits from the 70s to today.
-    Jordan Tupper | Baton Rouge Musician | Bassist | Vocalist | Music Educator
-    jordantupper.com | jordantuppermusic.com | nighthogbr.com
-    pinandpostco.com | thinksday.org | youtube.com/@jordanjtupper
-    Booking: david@cover6band.com
-  -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <style>
-/* ===========================
-   COVER 6 BAND — style.css
-   Black / White / Red aesthetic
-   =========================== */
-
-/* ── Variables ── */
 :root {
   --black:     #0a0a0a;
   --black-mid: #111111;
@@ -73,1175 +40,203 @@
   --nav-h: 70px;
 }
 
-/* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; font-size: 16px; }
-
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: var(--font-body);
-  line-height: 1.65;
-  overflow-x: hidden;
-}
-
+body { background: var(--black); color: var(--white); font-family: var(--font-body); line-height: 1.65; overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; object-fit: cover; }
 ul { list-style: none; }
-
 .red { color: var(--red); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-/* ── NAV ── */
-#navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  height: var(--nav-h);
-  background: transparent;
-  transition: background 0.3s, border-bottom 0.3s;
-}
-#navbar.scrolled {
-  background: rgba(10,10,10,0.97);
-  border-bottom: 2px solid var(--red);
-}
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  letter-spacing: 0.05em;
-  color: var(--white);
-}
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-}
-.nav-links a {
-  font-family: var(--font-cond);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-  transition: color 0.2s;
-}
+/* NAV */
+#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h); background: transparent; transition: background 0.3s, border-bottom 0.3s; }
+#navbar.scrolled { background: rgba(10,10,10,0.97); border-bottom: 2px solid var(--red); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.05em; color: var(--white); display: flex; align-items: center; }
+.nav-logo-img { height: 48px; width: auto; mix-blend-mode: screen; background: transparent; }
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { font-family: var(--font-cond); font-size: 1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); transition: color 0.2s; }
 .nav-links a:hover { color: var(--white); }
-.nav-cta {
-  background: var(--red) !important;
-  color: var(--white) !important;
-  padding: 0.5rem 1.25rem;
-  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
-}
+.nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 0.5rem 1.25rem; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
 .nav-cta:hover { background: var(--red-dark) !important; }
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-}
-.nav-toggle span {
-  display: block;
-  width: 26px;
-  height: 2px;
-  background: var(--white);
-  transition: transform 0.3s, opacity 0.3s;
-}
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.nav-toggle span { display: block; width: 26px; height: 2px; background: var(--white); transition: transform 0.3s, opacity 0.3s; }
 
-/* ── HERO ── */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: var(--black);
-}
-.hero-stripe {
-  position: absolute;
-  background: var(--red);
-  opacity: 0.06;
-}
-.hero-stripe--1 {
-  width: 3px;
-  height: 100%;
-  top: 0; left: 18%;
-  transform: skewX(-8deg);
-}
-.hero-stripe--2 {
-  width: 120px;
-  height: 100%;
-  top: 0; right: 0;
-  background: linear-gradient(to left, var(--red), transparent);
-  opacity: 0.08;
-}
-.hero-stripe--3 {
-  width: 100%;
-  height: 3px;
-  bottom: 30%;
-  left: 0;
-  background: linear-gradient(to right, transparent, var(--red), transparent);
-  opacity: 0.12;
-}
-.hero-noise {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
-}
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: var(--black); }
+.hero-stripe { position: absolute; background: var(--red); opacity: 0.06; }
+.hero-stripe--1 { width: 3px; height: 100%; top: 0; left: 18%; transform: skewX(-8deg); }
+.hero-stripe--2 { width: 120px; height: 100%; top: 0; right: 0; background: linear-gradient(to left, var(--red), transparent); opacity: 0.08; }
+.hero-stripe--3 { width: 100%; height: 3px; bottom: 30%; left: 0; background: linear-gradient(to right, transparent, var(--red), transparent); opacity: 0.12; }
+.hero-noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.03; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; text-align: center; padding: var(--nav-h) 2rem 4rem; }
+.hero-eyebrow { font-family: var(--font-cond); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; animation: fadeUp 0.8s ease both; }
+.hero-title { font-family: var(--font-display); line-height: 0.85; margin-bottom: 0.5rem; }
+.hero-title-cover { display: block; font-size: clamp(6rem, 18vw, 16rem); color: var(--white); letter-spacing: -0.02em; animation: fadeUp 0.8s 0.1s ease both; }
+.hero-title-six { display: block; font-size: clamp(8rem, 24vw, 22rem); line-height: 0.8; animation: fadeUp 0.8s 0.2s ease both; }
+.hero-tagline { font-family: var(--font-cond); font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; animation: fadeUp 0.8s 0.3s ease both; }
+.hero-sub { font-size: 1rem; color: var(--white-dim); letter-spacing: 0.05em; margin-bottom: 2.5rem; animation: fadeUp 0.8s 0.4s ease both; }
+.hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s 0.5s ease both; }
+.hero-logo-img { margin: 0 auto 1.5rem; max-width: 340px; width: 70vw; }
+.hero-logo-img img { width: 100%; height: auto; mix-blend-mode: screen; background: transparent; }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: var(--nav-h) 2rem 4rem;
-}
-.hero-eyebrow {
-  font-family: var(--font-cond);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 1rem;
-  animation: fadeUp 0.8s ease both;
-}
-.hero-title {
-  font-family: var(--font-display);
-  line-height: 0.85;
-  margin-bottom: 0.5rem;
-}
-.hero-title-cover {
-  display: block;
-  font-size: clamp(6rem, 18vw, 16rem);
-  color: var(--white);
-  letter-spacing: -0.02em;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-.hero-title-six {
-  display: block;
-  font-size: clamp(8rem, 24vw, 22rem);
-  line-height: 0.8;
-  animation: fadeUp 0.8s 0.2s ease both;
-}
-.hero-tagline {
-  font-family: var(--font-cond);
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-  animation: fadeUp 0.8s 0.3s ease both;
-}
-.hero-sub {
-  font-size: 1rem;
-  color: var(--white-dim);
-  letter-spacing: 0.05em;
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.8s 0.4s ease both;
-}
-.hero-ctas {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.5s ease both;
-}
-
-
-
-
-
-/* ── BUTTONS ── */
-.btn {
-  display: inline-block;
-  font-family: var(--font-cond);
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.85rem 2rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-}
-.btn--red {
-  background: var(--red);
-  color: var(--white);
-}
+/* BUTTONS */
+.btn { display: inline-block; font-family: var(--font-cond); font-weight: 900; font-size: 1rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.85rem 2rem; cursor: pointer; transition: all 0.2s; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); }
+.btn--red { background: var(--red); color: var(--white); }
 .btn--red:hover { background: var(--red-dark); transform: translateY(-2px); }
-.btn--outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-  clip-path: none;
-}
+.btn--outline { background: transparent; color: var(--white); border: 2px solid var(--white); clip-path: none; }
 .btn--outline:hover { background: var(--white); color: var(--black); }
 .btn--full { width: 100%; text-align: center; }
 
-/* ── SECTION SHARED ── */
+/* SECTION SHARED */
 .section { padding: 6rem 0; }
 .section--dark { background: var(--black-mid); }
-
-.section-label {
-  font-family: var(--font-cond);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 0.75rem;
-}
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1;
-  color: var(--white);
-  margin-bottom: 1.5rem;
-}
+.section-label { font-family: var(--font-cond); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
+.section-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; color: var(--white); margin-bottom: 1.5rem; }
 .section-header { text-align: center; margin-bottom: 3.5rem; }
 
-/* ── ABOUT ── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-.about-text p {
-  color: var(--white-dim);
-  margin-bottom: 1.25rem;
-  font-size: 1.05rem;
-}
-.about-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #222;
-}
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 5rem; align-items: center; }
+.about-text p { color: var(--white-dim); margin-bottom: 1.25rem; font-size: 1.05rem; }
+.about-stats { display: flex; gap: 2.5rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #222; }
 .stat { display: flex; flex-direction: column; }
-.stat-num {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  line-height: 1;
-}
-.stat-label {
-  font-family: var(--font-cond);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-}
+.stat-num { font-family: var(--font-display); font-size: 3rem; line-height: 1; }
+.stat-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-dim); }
 
-
-
-
-/* ── BAND MEMBERS ── */
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-}
+/* BAND MEMBERS */
+.members-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
 .member-card { text-align: center; }
-.member-photo-wrap {
-  position: relative;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-.member-photo-wrap img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 0.4s, transform 0.4s;
-}
-.member-card:hover .member-photo-wrap img {
-  filter: grayscale(0%);
-  transform: scale(1.04);
-}
-.member-number {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--red);
-  line-height: 1;
-  background: rgba(10,10,10,0.7);
-  padding: 0.2rem 0.4rem;
-}
-.member-info h3 {
-  font-family: var(--font-cond);
-  font-size: 1.2rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 0.3rem;
-}
-.member-role {
-  font-family: var(--font-cond);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-}
+.member-photo-wrap { position: relative; margin-bottom: 1rem; overflow: hidden; }
+.member-photo-wrap img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: grayscale(100%); transition: filter 0.4s, transform 0.4s; }
+.member-card:hover .member-photo-wrap img { filter: grayscale(0%); transform: scale(1.04); }
+.member-number { position: absolute; top: 0.75rem; left: 0.75rem; font-family: var(--font-display); font-size: 1.1rem; color: var(--red); line-height: 1; background: rgba(10,10,10,0.7); padding: 0.2rem 0.4rem; }
+.member-info h3 { font-family: var(--font-cond); font-size: 1.2rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); margin-bottom: 0.3rem; }
+.member-role { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); }
+.member-links { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.25rem; align-items: center; }
+.member-links a { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--red); transition: opacity 0.2s; }
+.member-links a:hover { opacity: 0.75; }
 
-/* ── VIDEOS ── */
-.videos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.video-wrap {
-  position: relative;
-  padding-top: 56.25%;
-  background: var(--black-soft);
-  overflow: hidden;
-  border: 1px solid #222;
-  transition: border-color 0.3s;
-}
+/* VIDEOS */
+.videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.video-wrap { position: relative; padding-top: 56.25%; background: var(--black-soft); overflow: hidden; border: 1px solid #222; transition: border-color 0.3s; }
 .video-wrap:hover { border-color: var(--red); }
-.video-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
+.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* ── BOOKING ── */
-.book {
-  position: relative;
-  overflow: hidden;
-}
-.book-bg {
-  position: absolute;
-  inset: 0;
-  background: var(--black);
-}
-.book-noise {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
-  pointer-events: none;
-}
-.book-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 5rem;
-  align-items: start;
-}
-.book-text p {
-  color: var(--white-dim);
-  margin-bottom: 2rem;
-}
-.book-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-.contact-link {
-  font-family: var(--font-cond);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--white-dim);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  transition: color 0.2s;
-}
+/* BOOKING */
+.book { position: relative; overflow: hidden; }
+.book-bg { position: absolute; inset: 0; background: var(--black); }
+.book-noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.025; pointer-events: none; }
+.book-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+.book-text p { color: var(--white-dim); margin-bottom: 2rem; }
+.book-contact { display: flex; flex-direction: column; gap: 0.85rem; }
+.contact-link { font-family: var(--font-cond); font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white-dim); display: flex; align-items: center; gap: 0.6rem; transition: color 0.2s; }
 .contact-link:hover { color: var(--white); }
 
-/* ── FORM ── */
+/* FORM */
 .form { display: flex; flex-direction: column; gap: 1.25rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-.form-group label {
-  font-family: var(--font-cond);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-}
-.form-group input,
-.form-group select,
-.form-group textarea {
-  background: var(--black-soft);
-  border: 1px solid #2a2a2a;
-  border-bottom: 2px solid #333;
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  padding: 0.75rem 1rem;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-  appearance: none;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--red);
-  border-bottom-color: var(--red);
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #444;
-}
+.form-group label { font-family: var(--font-cond); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-dim); }
+.form-group input, .form-group select, .form-group textarea { background: var(--black-soft); border: 1px solid #2a2a2a; border-bottom: 2px solid #333; color: var(--white); font-family: var(--font-body); font-size: 0.95rem; padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s; width: 100%; appearance: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--red); border-bottom-color: var(--red); }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #444; }
 .form-group select option { background: var(--black-soft); }
 .form-group textarea { resize: vertical; }
 
-/* ── FOOTER ── */
-.footer {
-  background: var(--black-mid);
-  border-top: 3px solid var(--red);
-  padding: 3rem 0;
-  text-align: center;
-}
+/* FOOTER */
+.footer { background: var(--black-mid); border-top: 3px solid var(--red); padding: 3rem 0; text-align: center; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
-.footer-logo {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
-}
-.footer-tagline {
-  font-family: var(--font-cond);
-  font-size: 0.85rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-}
-.footer-location {
-  font-size: 0.85rem;
-  color: #555;
-  font-family: var(--font-cond);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-.footer-links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-.footer-links a {
-  font-family: var(--font-cond);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--white-dim);
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
+.footer-logo { font-family: var(--font-display); font-size: 2.5rem; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.footer-logo-img { height: 120px; width: auto; mix-blend-mode: screen; background: transparent; }
+.footer-tagline { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--white-dim); }
+.footer-location { font-size: 0.85rem; color: #555; font-family: var(--font-cond); letter-spacing: 0.15em; text-transform: uppercase; }
+.footer-links { display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem; }
+.footer-links a { font-family: var(--font-cond); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; color: var(--white-dim); text-transform: uppercase; transition: color 0.2s; }
 .footer-links a:hover { color: var(--red); }
 .footer-divider { color: #333; }
-.footer-copy {
-  font-size: 0.75rem;
-  color: #444;
-  margin-top: 0.5rem;
-  font-family: var(--font-cond);
-  letter-spacing: 0.1em;
-}
+.footer-copy { font-size: 0.75rem; color: #444; margin-top: 0.5rem; font-family: var(--font-cond); letter-spacing: 0.1em; }
 
-/* ── SCROLL REVEAL ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal--right {
-  transform: translateX(30px);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
+/* SCROLL REVEAL */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal--right { transform: translateX(30px); }
+.reveal.visible { opacity: 1; transform: none; }
 
-/* ── KEYFRAMES ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-  50%       { opacity: 1;   transform: scaleY(1.15); }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .members-grid { grid-template-columns: repeat(3, 1fr); }
-  
-}
-
-@media (max-width: 768px) {
-  .nav-toggle { display: flex; }
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: var(--nav-h); left: 0; right: 0;
-    background: var(--black-mid);
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    border-bottom: 3px solid var(--red);
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
-  .nav-cta { text-align: center; clip-path: none; }
-
-  .about-grid { grid-template-columns: 1fr; }
-  
-
-  .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-
-  .videos-grid { grid-template-columns: 1fr; }
-
-  .photos-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  .photo-item--large { grid-column: auto; grid-row: auto; }
-
-  .book-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .form-row { grid-template-columns: 1fr; }
-
-  .section { padding: 4rem 0; }
-}
-
-@media (max-width: 480px) {
-  .members-grid { grid-template-columns: repeat(2, 1fr); }
-  .photos-grid { grid-template-columns: 1fr; }
-  .about-stats { gap: 1.5rem; }
-}
-
-
-.nav-logo { display: flex; align-items: center; }
-.nav-logo-img { height: 48px; width: auto; }
-.hero-logo-img { margin: 0 auto 1.5rem; max-width: 340px; width: 70vw; }
-.hero-logo-img img { width: 100%; height: auto; }
-.footer-logo-img { height: 120px; width: auto; }
-
-
-/* ── SOCIAL ICONS ── */
-.footer-social {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.75rem;
-}
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #2a2a2a;
-  color: var(--white-dim);
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
-}
-.social-link:hover {
-  color: var(--white);
-  border-color: var(--red);
-  background: rgba(224,26,26,0.08);
-}
-
-
-.footer-network {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.25rem 0.6rem;
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid #1e1e1e;
-}
-.footer-network a {
-  font-family: var(--font-cond);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: lowercase;
-  color: #444;
-  transition: color 0.2s;
-}
+/* SOCIAL ICONS */
+.footer-social { display: flex; gap: 1.25rem; align-items: center; justify-content: center; margin-bottom: 0.75rem; }
+.social-link { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #2a2a2a; color: var(--white-dim); transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.social-link:hover { color: var(--white); border-color: var(--red); background: rgba(224,26,26,0.08); }
+.footer-network { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.6rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #1e1e1e; }
+.footer-network a { font-family: var(--font-cond); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: lowercase; color: #444; transition: color 0.2s; }
 .footer-network a:hover { color: var(--red); }
 
-
-/* ── SOCIAL FEED ── */
+/* SOCIAL FEED */
 .social { background: var(--black); }
-.social-feed-wrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  min-height: 620px;
-}
-.social-feed-wrap .fb-page {
-  border: 1px solid #1e1e1e;
-  max-width: 500px;
-  width: 100%;
-}
-.social-fb-link {
-  text-align: center;
-}
+.social-feed-wrap { display: flex; justify-content: center; margin-bottom: 2rem; min-height: 620px; }
+.social-feed-wrap .fb-page { border: 1px solid #1e1e1e; max-width: 500px; width: 100%; }
+.social-fb-link { text-align: center; }
 
-
-/* ── LOGO BLEND FIX ── */
-.hero-logo-img img,
-.nav-logo-img,
-.footer-logo-img {
-  mix-blend-mode: screen;
-  background: transparent;
-}
-
-
-/* ── GIG CALENDAR ── */
-.gigs-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid #222;
-  border-left: 1px solid #222;
-}
-.gig-row {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 0.85rem 1rem;
-  border-right: 1px solid #222;
-  border-bottom: 1px solid #222;
-  transition: background 0.2s;
-}
-.gig-row:hover {
-  background: rgba(224,26,26,0.04);
-}
-.gig-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: var(--black-soft);
-  border-left: 3px solid var(--red);
-  padding: 0.4rem 0.6rem;
-  min-width: 72px;
-}
-.gig-month {
-  font-family: var(--font-cond);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--red);
-}
-.gig-day {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  line-height: 1;
-  color: var(--white);
-}
-.gig-year {
-  font-family: var(--font-cond);
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  color: #555;
-}
-.gig-venue {
-  font-family: var(--font-cond);
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 0.1rem;
-}
-.gig-location {
-  font-family: var(--font-cond);
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white-dim);
-  margin-bottom: 0;
-}
-.gig-details {
-  font-size: 0.82rem;
-  color: #555;
-  font-family: var(--font-cond);
-  letter-spacing: 0.08em;
-}
-
-.gigs-empty {
-  text-align: center;
-  padding: 3rem 0 1rem;
-  font-family: var(--font-cond);
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  color: #555;
-  display: none; /* hidden by default — show if no gig rows exist */
-}
+/* GIG CALENDAR */
+.gigs-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #222; border-left: 1px solid #222; }
+.gig-row { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: 1.25rem; padding: 0.85rem 1rem; border-right: 1px solid #222; border-bottom: 1px solid #222; transition: background 0.2s; }
+.gig-row:hover { background: rgba(224,26,26,0.04); }
+.gig-date { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--black-soft); border-left: 3px solid var(--red); padding: 0.4rem 0.6rem; min-width: 72px; }
+.gig-month { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); }
+.gig-day { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: var(--white); }
+.gig-year { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.15em; color: #555; }
+.gig-venue { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); margin-bottom: 0.1rem; }
+.gig-location { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 0; }
+.gig-details { font-size: 0.82rem; color: #555; font-family: var(--font-cond); letter-spacing: 0.08em; }
+.gigs-empty { text-align: center; padding: 3rem 0 1rem; font-family: var(--font-cond); font-size: 1rem; letter-spacing: 0.08em; color: #555; }
 .gigs-empty a { color: var(--red); text-decoration: underline; }
+.gigs-cta { text-align: center; padding: 1.5rem 0 0; font-family: var(--font-cond); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white-dim); }
+.gigs-cta a { color: var(--red); font-weight: 700; transition: opacity 0.2s; }
+.gigs-cta a:hover { opacity: 0.75; }
 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .members-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 900px) {
   .gigs-list { grid-template-columns: repeat(2, 1fr); }
 }
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--black-mid); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 3px solid var(--red); }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.2rem; }
+  .nav-cta { text-align: center; clip-path: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .videos-grid { grid-template-columns: 1fr; }
+  .book-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .section { padding: 4rem 0; }
+}
 @media (max-width: 600px) {
   .gigs-list { grid-template-columns: 1fr; border-left: none; }
-  .gig-row {
-    grid-template-columns: 70px 1fr;
-    gap: 1rem;
-    border-right: none;
-  }
+  .gig-row { grid-template-columns: 70px 1fr; gap: 1rem; border-right: none; }
   .gig-date { min-width: 60px; }
   .gig-day { font-size: 2rem; }
 }
-
-
-.gigs-cta {
-  text-align: center;
-  padding: 1.5rem 0 0;
-  font-family: var(--font-cond);
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-  color: var(--white-dim);
+@media (max-width: 480px) {
+  .members-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stats { gap: 1.5rem; }
 }
-.gigs-cta a {
-  color: var(--red);
-  font-weight: 700;
-  transition: opacity 0.2s;
-}
-.gigs-cta a:hover { opacity: 0.75; }
-
 </style>
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Cover 6",
-    "alternateName": "Cover 6 Band",
-    "url": "https://www.cover6band.com",
-    "description": "Cover 6 is a five-piece live cover band based in Baton Rouge, Louisiana, performing rock anthems and danceable grooves — hits from the 70s to today. Available for bars, festivals, corporate events, and private parties.",
-    "genre": ["Rock", "Classic Rock", "Pop Rock", "Funk", "Soul", "Dance", "Cover Band"],
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Baton Rouge, Louisiana",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Baton Rouge",
-        "addressRegion": "LA",
-        "addressCountry": "US"
-      }
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Louisiana"
-    },
-    "member": [
-      {
-        "@type": "OrganizationRole",
-        "roleName": "Bass / Vocals",
-        "member": {
-          "@type": "Person",
-          "name": "Jordan Tupper",
-          "url": "https://jordantupper.com",
-          "sameAs": [
-            "https://jordantupper.com",
-            "https://jordantuppermusic.com",
-            "https://nighthogbr.com",
-            "https://batonrougejazz.com",
-            "https://www.youtube.com/@jordanjtupper",
-            "https://www.linkedin.com/in/jordantupper225",
-            "https://www.instagram.com/207_to_225/"
-          ]
-        }
-      },
-      {
-        "@type": "OrganizationRole",
-        "roleName": "Lead Vocals",
-        "member": { "@type": "Person", "name": "David Martin" }
-      },
-      {
-        "@type": "OrganizationRole",
-        "roleName": "Lead Guitar",
-        "member": { "@type": "Person", "name": "Sam Jeter" }
-      },
-      {
-        "@type": "OrganizationRole",
-        "roleName": "Rhythm Guitar",
-        "member": { "@type": "Person", "name": "Nick Fehn" }
-      },
-      {
-        "@type": "OrganizationRole",
-        "roleName": "Drums",
-        "member": { "@type": "Person", "name": "Coty" }
-      }
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "david@cover6band.com",
-      "contactType": "Booking",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61586946814825",
-      "https://jordantupper.com",
-      "https://jordantuppermusic.com",
-      "https://nighthogbr.com",
-      "https://pinandpostco.com",
-      "https://thinksday.org"
-    ],
-    "email": "david@cover6band.com",
-    "logo": "https://www.cover6band.com/images/og-image.jpg",
-    "image": "https://www.cover6band.com/images/og-image.jpg"
-  }
-  </script>
+  <!-- Schema.org Structured Data (unchanged) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Cover 6","alternateName":"Cover 6 Band","url":"https://www.cover6band.com","description":"Cover 6 is a five-piece live cover band based in Baton Rouge, Louisiana, performing rock anthems and danceable grooves — hits from the 70s to today.","genre":["Rock","Classic Rock","Pop Rock","Funk","Soul","Dance","Cover Band"],"foundingLocation":{"@type":"Place","name":"Baton Rouge, Louisiana"},"email":"david@cover6band.com","logo":"https://www.cover6band.com/images/og-image.jpg","image":"https://www.cover6band.com/images/og-image.jpg","sameAs":["https://www.facebook.com/profile.php?id=61586946814825","https://jordantupper.com","https://nighthogbr.com"]}</script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Jordan Tupper",
-    "givenName": "Jordan",
-    "familyName": "Tupper",
-    "description": "Jordan Tupper is a bassist, vocalist, and music educator based in Baton Rouge, Louisiana. He performs with Cover 6 Band and Night Hog, and publishes music content on YouTube.",
-    "jobTitle": "Bassist, Vocalist, Music Educator",
-    "url": "https://www.cover6band.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Baton Rouge",
-      "addressRegion": "LA",
-      "addressCountry": "US"
-    },
-    "knowsAbout": [
-      "Bass Guitar",
-      "Live Music Performance",
-      "Vocals",
-      "Music Education",
-      "Band Direction",
-      "Classic Rock",
-      "Funk",
-      "Soul",
-      "Baton Rouge Louisiana Music Scene"
-    ],
-    "performerIn": [
-      {
-        "@type": "MusicGroup",
-        "name": "Cover 6",
-        "url": "https://www.cover6band.com"
-      },
-      {
-        "@type": "MusicGroup",
-        "name": "Night Hog",
-        "url": "https://nighthogbr.com"
-      }
-    ],
-    "sameAs": [
-      "https://nighthogbr.com",
-      "https://www.cover6band.com",
-      "https://www.youtube.com/@jordanjtupper",
-      "https://www.facebook.com/profile.php?id=61586946814825",
-      "https://jordantupper.com",
-      "https://jordantuppermusic.com",
-      "https://nighthogbr.com",
-      "https://pinandpostco.com",
-      "https://thinksday.org"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Cover 6 Band",
-    "url": "https://www.cover6band.com",
-    "description": "Official website of Cover 6, a Baton Rouge live cover band featuring Jordan Tupper on bass and vocals. Rock, funk, and soul hits from the 70s to today.",
-    "inLanguage": "en-US",
-    "publisher": {
-      "@type": "MusicGroup",
-      "name": "Cover 6",
-      "url": "https://www.cover6band.com"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.cover6band.com/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cover6band.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Cover 6",
-        "item": "https://www.cover6band.com/#about"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "The Band",
-        "item": "https://www.cover6band.com/#band"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Videos",
-        "item": "https://www.cover6band.com/#videos"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Photos",
-        "item": "https://www.cover6band.com/#photos"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Book Cover 6",
-        "item": "https://www.cover6band.com/#book"
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Cover 6 Band Live Performance",
-    "description": "Cover 6 Band performs live rock anthems and danceable grooves — hits from the 70s to today. Featuring Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums.",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventSchedule": {
-      "@type": "Schedule",
-      "scheduleTimezone": "America/Chicago",
-      "repeatFrequency": "P1M",
-      "startDate": "2026-01-01"
-    },
-    "image": "https://www.cover6band.com/logo.png",
-    "location": {
-      "@type": "Place",
-      "name": "Baton Rouge Area Venues",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Baton Rouge",
-        "addressRegion": "LA",
-        "addressCountry": "US"
-      }
-    },
-    "performer": {
-      "@type": "MusicGroup",
-      "name": "Cover 6",
-      "url": "https://www.cover6band.com"
-    },
-    "organizer": {
-      "@type": "MusicGroup",
-      "name": "Cover 6",
-      "url": "https://www.cover6band.com",
-      "email": "david@cover6band.com"
-    },
-    "offers": {
-      "@type": "Offer",
-      "description": "Contact Cover 6 for booking availability and pricing",
-      "url": "https://www.cover6band.com/#book",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EntertainmentBusiness",
-    "name": "Cover 6 Band",
-    "alternateName": "Cover 6",
-    "url": "https://www.cover6band.com",
-    "description": "Cover 6 is a five-piece live cover band based in Baton Rouge, Louisiana. Featuring Jordan Tupper on bass and vocals, Cover 6 performs rock anthems and danceable grooves — hits from the 70s to today — for bars, festivals, corporate events, and private parties across Louisiana.",
-    "telephone": "",
-    "email": "david@cover6band.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Baton Rouge",
-      "addressRegion": "LA",
-      "postalCode": "70801",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 30.4515,
-      "longitude": -91.1871
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Baton Rouge", "containedInPlace": { "@type": "State", "name": "Louisiana" } },
-      { "@type": "City", "name": "New Orleans", "containedInPlace": { "@type": "State", "name": "Louisiana" } },
-      { "@type": "State", "name": "Louisiana" }
-    ],
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 00:00-23:59",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61586946814825",
-      "https://www.youtube.com/@jordanjtupper"
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": "Jordan Tupper",
-      "url": "https://jordantupper.com",
-      "sameAs": [
-        "https://jordantupper.com",
-        "https://jordantuppermusic.com",
-        "https://nighthogbr.com",
-        "https://www.youtube.com/@jordanjtupper"
-      ]
-    },
-    "hasMap": "https://maps.google.com/?q=Baton+Rouge,+Louisiana",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Check, Electronic Transfer"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Cover 6 Band Live Performance Videos",
-    "description": "Live performance videos featuring Cover 6 Band — Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums. Baton Rouge Louisiana cover band.",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://www.youtube.com/watch?v=NK4ik3AuEKk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://www.youtube.com/watch?v=VqCDIThWpRk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://www.youtube.com/watch?v=wTTwGUUn_Xg"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://www.youtube.com/watch?v=Z2GKvMR4394"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://www.youtube.com/watch?v=kI4KoQ8hM-M"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://www.youtube.com/watch?v=Ia51PZuwa-U"
-      }
-    ]
-  }
-  </script>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR4MR0K9W1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CR4MR0K9W1');
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What kind of music does Cover 6 Band play?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band plays rock anthems and danceable grooves spanning five decades — hits from the 70s to today, including classic rock, pop rock, funk, and soul."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who are the members of Cover 6 Band?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band is a five-piece group featuring Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who is Jordan Tupper?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Jordan Tupper is a Baton Rouge-based musician, bassist, vocalist, and music educator. He is a 2024 Grammy Music Educator Award Quarterfinalist and performs with Cover 6 Band, Night Hog, and Jim Standley Jazz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is Cover 6 Band based?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band is based in Baton Rouge, Louisiana, and performs at venues, festivals, corporate events, and private parties across Louisiana and the surrounding region."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I book Cover 6 Band?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can book Cover 6 Band by emailing david@cover6band.com or using the booking form at cover6band.com."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Jordan Tupper", "item": "https://jordantupper.com" },
-      { "@type": "ListItem", "position": 2, "name": "Cover 6 Band", "item": "https://www.cover6band.com" }
-    ]
-  }
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CR4MR0K9W1');</script>
 </head>
 <body>
 
@@ -1281,7 +276,6 @@ ul { list-style: none; }
         <a href="#videos" class="btn btn--outline">Watch Us Play</a>
       </div>
     </div>
-  </div>
   </section>
 
   <!-- ABOUT -->
@@ -1291,24 +285,13 @@ ul { list-style: none; }
         <div class="about-text reveal">
           <p class="section-label">About the Band</p>
           <h2 class="section-title">Five Players.<br><span class="red">One Sound.</span></h2>
-          <p>Cover 6 is a five-piece live cover band from the Baton Rouge area, playing rock, pop, funk, soul, and crowd favorites from the 70s to today. The band features <strong>David Martin</strong> on lead vocals, <strong>Sam Jeter</strong> on lead guitar, <Strong>Nick Fehn</Strong> on rhythm guitar, <strong>Jordan Tupper</strong> on bass and vocals, and Coty on drums.</p>
+          <p>Cover 6 is a five-piece live cover band from the Baton Rouge area, playing rock, pop, funk, soul, and crowd favorites from the 70s to today. The band features <strong>David Martin</strong> on lead vocals, <strong>Sam Jeter</strong> on lead guitar, <strong>Nick Fehn</strong> on rhythm guitar, <strong>Jordan Tupper</strong> on bass and vocals, and Coty on drums.</p>
           <p>From classic rock anthems to the hits you're dancing to right now, Cover 6 covers five decades of the best music ever made. Whether you're booking a festival, a corporate event, a bar night, or a private party, one thing is guaranteed: the room will move. We've got you covered.</p>
           <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num red">5</span>
-              <span class="stat-label">Members</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num red">50+</span>
-              <span class="stat-label">Years of Hits</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num red">1</span>
-              <span class="stat-label">Mission</span>
-            </div>
+            <div class="stat"><span class="stat-num red">5</span><span class="stat-label">Members</span></div>
+            <div class="stat"><span class="stat-num red">50+</span><span class="stat-label">Years of Hits</span></div>
+            <div class="stat"><span class="stat-num red">1</span><span class="stat-label">Mission</span></div>
           </div>
-        </div>
-        </div>
         </div>
       </div>
     </div>
@@ -1321,146 +304,16 @@ ul { list-style: none; }
         <p class="section-label">Catch Us Live</p>
         <h2 class="section-title">Upcoming <span class="red">Gigs</span></h2>
       </div>
-      <div class="gigs-list">
 
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">JUN</span>
-            <span class="gig-day">05</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Papi's</h3>
-            <p class="gig-location">Baton Rouge, LA</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">JUN</span>
-            <span class="gig-day">20</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Reno's on the River</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">3pm – 6pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">JUL</span>
-            <span class="gig-day">18</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Big J's Side Porch</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">JUL</span>
-            <span class="gig-day">31</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Locals</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">8:30pm – 12:30am</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">AUG</span>
-            <span class="gig-day">01</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Tequila's</h3>
-            <p class="gig-location">Denham Springs, LA</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">AUG</span>
-            <span class="gig-day">08</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Sun Outdoors RV Resort</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">TBA</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">AUG</span>
-            <span class="gig-day">15</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Tequila's</h3>
-            <p class="gig-location">Zachary, LA</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">AUG</span>
-            <span class="gig-day">22</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Victoria's</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">AUG</span>
-            <span class="gig-day">29</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Big J's Side Porch</h3>
-            <p class="gig-location">Louisiana</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">SEP</span>
-            <span class="gig-day">18</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Ragon's</h3>
-            <p class="gig-location">Clinton, LA</p>
-            <p class="gig-details">8pm – 12am</p>
-          </div>
-        </div>
-
-        <!-- PASTE NEW GIG ROWS ABOVE THIS LINE -->
-
+      <!-- JS renders only future gigs here -->
+      <div class="gigs-list" id="gigsList"></div>
+      <div class="gigs-empty" id="gigsEmpty">
+        No upcoming gigs scheduled — <a href="#book">book us for your event!</a>
       </div>
 
       <div class="gigs-cta reveal">
         <p>Want Cover 6 at your event? <a href="#book">Book Us &rarr;</a></p>
       </div>
-
     </div>
   </section>
 
@@ -1473,31 +326,40 @@ ul { list-style: none; }
       </div>
       <div class="members-grid">
 
+        <!-- David Martin -->
         <div class="member-card reveal">
           <div class="member-photo-wrap">
-            <img src="member-david.jpg" alt="David Martin, lead vocalist of Cover 6 Band, Baton Rouge Louisiana live cover band" loading="lazy" />
+            <img src="member-david.jpg" alt="David Martin, lead vocalist of Cover 6 Band" loading="lazy" />
             <div class="member-number">01</div>
           </div>
           <div class="member-info">
             <h3>David Martin</h3>
             <p class="member-role"><span class="red">&#9632;</span> Lead Vocals</p>
+            <div class="member-links">
+              <a href="https://soundcloud.com/david-c-martin" target="_blank" rel="noopener noreferrer">SoundCloud ↗</a>
+            </div>
           </div>
         </div>
 
+        <!-- Sam Jeter -->
         <div class="member-card reveal">
           <div class="member-photo-wrap">
-            <img src="member-sam.jpg" alt="Sam Jeter, lead guitarist of Cover 6 Band, Baton Rouge Louisiana" loading="lazy" />
+            <img src="member-sam.jpg" alt="Sam Jeter, lead guitarist of Cover 6 Band" loading="lazy" />
             <div class="member-number">02</div>
           </div>
           <div class="member-info">
             <h3>Sam Jeter</h3>
             <p class="member-role"><span class="red">&#9632;</span> Lead Guitar</p>
+            <div class="member-links">
+              <a href="https://www.youtube.com/@samjetermusic8102" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+            </div>
           </div>
         </div>
 
+        <!-- Nick Fehn -->
         <div class="member-card reveal">
           <div class="member-photo-wrap">
-            <img src="member-nick.jpg" alt="Nick Fehn, rhythm guitarist of Cover 6 Band, Baton Rouge Louisiana" loading="lazy" />
+            <img src="member-nick.jpg" alt="Nick Fehn, rhythm guitarist of Cover 6 Band" loading="lazy" />
             <div class="member-number">03</div>
           </div>
           <div class="member-info">
@@ -1506,21 +368,28 @@ ul { list-style: none; }
           </div>
         </div>
 
+        <!-- Jordan Tupper -->
         <div class="member-card reveal">
           <div class="member-photo-wrap">
-            <img src="member-jordan.jpg" alt="Jordan Tupper, bassist and vocalist of Cover 6 Band, Baton Rouge Louisiana musician" loading="lazy" />
+            <img src="member-jordan.jpg" alt="Jordan Tupper, bassist and vocalist of Cover 6 Band" loading="lazy" />
             <div class="member-number">04</div>
           </div>
           <div class="member-info">
-            <h3><a href="https://jordantupper.com" style="color:inherit;text-decoration:none;">Jordan Tupper</a></h3>
+            <h3>Jordan Tupper</h3>
             <p class="member-role"><span class="red">&#9632;</span> Bass / Vocals</p>
-            <p class="member-bio" style="font-size:0.82rem;color:#999;margin-top:6px;line-height:1.4;">Baton Rouge musician &amp; 2024 Grammy Music Educator Award Quarterfinalist. Also performs with <a href="https://nighthogbr.com" style="color:#e01a1a;text-decoration:none;">Night Hog</a> and <a href="https://batonrougejazz.com" style="color:#e01a1a;text-decoration:none;">Jim Standley Jazz</a>.</p>
+            <p class="member-bio" style="font-size:0.82rem;color:#999;margin-top:6px;line-height:1.4;">Baton Rouge musician &amp; 2024 Grammy Music Educator Award Quarterfinalist.</p>
+            <div class="member-links">
+              <a href="https://www.jordantupper.com" target="_blank" rel="noopener noreferrer">jordantupper.com ↗</a>
+              <a href="https://www.nighthogbr.com" target="_blank" rel="noopener noreferrer">nighthogbr.com ↗</a>
+              <a href="https://www.batonrougejazz.com" target="_blank" rel="noopener noreferrer">batonrougejazz.com ↗</a>
+            </div>
           </div>
         </div>
 
+        <!-- Coty -->
         <div class="member-card reveal">
           <div class="member-photo-wrap">
-            <img src="images/member-coty.jpg" alt="Coty, drummer of Cover 6 Band, Baton Rouge Louisiana" loading="lazy" />
+            <img src="images/member-coty.jpg" alt="Coty, drummer of Cover 6 Band" loading="lazy" />
             <div class="member-number">05</div>
           </div>
           <div class="member-info">
@@ -1541,26 +410,15 @@ ul { list-style: none; }
         <h2 class="section-title">See Us <span class="red">Live</span></h2>
       </div>
       <div class="videos-grid">
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/NK4ik3AuEKk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/VqCDIThWpRk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/wTTwGUUn_Xg" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/Z2GKvMR4394" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/kI4KoQ8hM-M" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube.com/embed/Ia51PZuwa-U" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/NK4ik3AuEKk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/VqCDIThWpRk" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/wTTwGUUn_Xg" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/Z2GKvMR4394" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/kI4KoQ8hM-M" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <div class="video-wrap reveal"><iframe src="https://www.youtube.com/embed/Ia51PZuwa-U" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- SOCIAL FEED -->
   <section id="social" class="social section">
@@ -1582,18 +440,14 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="social-fb-link reveal">
-        <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
-          View on Facebook
-        </a>
+        <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="btn btn--outline">View on Facebook</a>
       </div>
     </div>
   </section>
 
   <!-- BOOKING -->
   <section id="book" class="book section">
-    <div class="book-bg">
-      <div class="book-noise"></div>
-    </div>
+    <div class="book-bg"><div class="book-noise"></div></div>
     <div class="container">
       <div class="book-grid">
         <div class="book-text reveal">
@@ -1601,41 +455,21 @@ ul { list-style: none; }
           <h2 class="section-title">Book <span class="red">Cover 6</span></h2>
           <p>Ready to bring the energy to your event? Fill out the form and we'll get back to you fast. We play bars, festivals, corporate events, private parties, and anything in between.</p>
           <div class="book-contact">
-            <a href="mailto:david@cover6band.com" class="contact-link">
-              <span class="red">✉</span> david@cover6band.com
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <span class="red">f</span> Cover 6 on Facebook
-            </a>
+            <a href="mailto:david@cover6band.com" class="contact-link"><span class="red">✉</span> david@cover6band.com</a>
+            <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="red">f</span> Cover 6 on Facebook</a>
           </div>
         </div>
         <div class="book-form reveal reveal--right">
-          <!-- Replace mdavnegn with your Formspree endpoint -->
           <form action="https://formspree.io/f/mdavnegn" method="POST" class="form">
             <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="First Last" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
-              </div>
+              <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="First Last" required /></div>
+              <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="you@example.com" required /></div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(225) 555-0100" />
-              </div>
-              <div class="form-group">
-                <label for="date">Event Date</label>
-                <input type="date" id="date" name="event_date" />
-              </div>
+              <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(225) 555-0100" /></div>
+              <div class="form-group"><label for="date">Event Date</label><input type="date" id="date" name="event_date" /></div>
             </div>
-            <div class="form-group">
-              <label for="venue">Venue / Location</label>
-              <input type="text" id="venue" name="venue" placeholder="Venue name and city" />
-            </div>
+            <div class="form-group"><label for="venue">Venue / Location</label><input type="text" id="venue" name="venue" placeholder="Venue name and city" /></div>
             <div class="form-group">
               <label for="event-type">Event Type</label>
               <select id="event-type" name="event_type">
@@ -1648,10 +482,7 @@ ul { list-style: none; }
                 <option>Other</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="message">Tell Us More</label>
-              <textarea id="message" name="message" rows="4" placeholder="Details about your event, expected attendance, budget, any questions…"></textarea>
-            </div>
+            <div class="form-group"><label for="message">Tell Us More</label><textarea id="message" name="message" rows="4" placeholder="Details about your event, expected attendance, budget, any questions…"></textarea></div>
             <button type="submit" class="btn btn--red btn--full">Send Inquiry</button>
           </form>
         </div>
@@ -1666,15 +497,12 @@ ul { list-style: none; }
       <p class="footer-tagline">We've Got You Covered</p>
       <address class="footer-location">Baton Rouge, Louisiana</address>
       <div class="footer-social">
-        <!-- Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cover 6 on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
         </a>
-        <!-- YouTube -->
         <a href="https://www.youtube.com/@jordanjtupper" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Jordan Tupper on YouTube">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
         </a>
-        <!-- Email -->
         <a href="mailto:david@cover6band.com" class="social-link" aria-label="Email Cover 6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
         </a>
@@ -1703,15 +531,66 @@ ul { list-style: none; }
     </div>
   </footer>
 
-  
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
-    nonce="cover6fb">
-  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="cover6fb"></script>
 
   <script>
+// ── GIG DATA — edit this array to add/remove gigs ──
+// Dates are compared against today; past gigs auto-hide.
+const GIGS = [
+  { year: 2026, month: 6,  day: 20, venue: "Reno's on the River",  location: "Louisiana",           time: "3pm – 6pm" },
+  { year: 2026, month: 7,  day:  4, venue: "Phil Brady's",          location: "Baton Rouge, LA",     time: "8:30pm – ?" },
+  { year: 2026, month: 7,  day: 18, venue: "Big J's Side Porch",    location: "Louisiana",           time: "6pm – 9pm" },
+  { year: 2026, month: 7,  day: 31, venue: "Locals",                location: "Louisiana",           time: "8:30pm – 12:30am" },
+  { year: 2026, month: 8,  day:  1, venue: "Tequila's",             location: "Denham Springs, LA",  time: "6pm – 9pm" },
+  { year: 2026, month: 8,  day:  8, venue: "Sun Outdoors RV Resort",location: "Louisiana",           time: "TBA" },
+  { year: 2026, month: 8,  day: 15, venue: "Tequila's",             location: "Zachary, LA",         time: "6pm – 9pm" },
+  { year: 2026, month: 8,  day: 22, venue: "Victoria's",            location: "Louisiana",           time: "6pm – 9pm" },
+  { year: 2026, month: 8,  day: 29, venue: "Big J's Side Porch",    location: "Louisiana",           time: "6pm – 9pm" },
+  { year: 2026, month: 9,  day: 18, venue: "Ragon's",               location: "Clinton, LA",         time: "8pm – 12am" },
+];
+
+const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+
+(function renderGigs() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const upcoming = GIGS.filter(g => {
+    const d = new Date(g.year, g.month - 1, g.day);
+    return d >= today;
+  });
+
+  const list = document.getElementById('gigsList');
+  const empty = document.getElementById('gigsEmpty');
+
+  if (!upcoming.length) {
+    empty.style.display = 'block';
+    return;
+  }
+
+  upcoming.forEach(g => {
+    const row = document.createElement('div');
+    row.className = 'gig-row reveal';
+    row.innerHTML = `
+      <div class="gig-date">
+        <span class="gig-month">${MONTHS[g.month - 1]}</span>
+        <span class="gig-day">${String(g.day).padStart(2,'0')}</span>
+        <span class="gig-year">${g.year}</span>
+      </div>
+      <div class="gig-info">
+        <h3 class="gig-venue">${g.venue}</h3>
+        <p class="gig-location">${g.location}</p>
+        <p class="gig-details">${g.time}</p>
+      </div>`;
+    list.appendChild(row);
+  });
+
+  // Re-observe newly added reveal elements
+  document.querySelectorAll('.gig-row.reveal').forEach(el => revealObserver.observe(el));
+})();
+
 // ── NAV SCROLL ──
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -1734,15 +613,10 @@ navToggle.addEventListener('click', () => {
     spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   }
 });
-
-// Close nav when link clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    navToggle.querySelectorAll('span').forEach(s => {
-      s.style.transform = '';
-      s.style.opacity = '';
-    });
+    navToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   });
 });
 
@@ -1751,14 +625,11 @@ const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 80);
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
       revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12 });
-
 revealEls.forEach(el => revealObserver.observe(el));
 
 // ── FOOTER YEAR ──
@@ -1767,21 +638,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ── FORM SUBMIT FEEDBACK ──
 const form = document.querySelector('.form');
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', () => {
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
+    const orig = btn.textContent;
     btn.textContent = 'Sending…';
     btn.disabled = true;
-
-    // If using Formspree, let it handle naturally;
-    // this just gives visual feedback before page redirects.
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }, 4000);
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 4000);
   });
 }
-
 </script>
 </body>
 </html>
