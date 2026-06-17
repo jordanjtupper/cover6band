@@ -22,6 +22,8 @@
   <meta name="twitter:description" content="Baton Rouge's high-energy live cover band. Rock and danceable grooves from the 70s to today." />
   <meta name="twitter:image" content="https://www.cover6band.com/images/og-image.jpg" />
 
+  <!-- Fonts -->
+  
   <!--
     Cover 6 Band — Official Website
     Baton Rouge, Louisiana Live Cover Band
@@ -34,6 +36,18 @@
     Booking: david@cover6band.com
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+  <!--
+    Cover 6 Band — Official Website
+    Baton Rouge, Louisiana Live Cover Band
+    Featuring Jordan Tupper (bass/vocals), David Martin (lead vocals),
+    Sam Jeter (lead guitar), Nick Fehn (rhythm guitar), Coty (drums).
+    Rock, funk, and soul hits from the 70s to today.
+    Jordan Tupper | Baton Rouge Musician | Bassist | Vocalist | Music Educator
+    jordantupper.com | jordantuppermusic.com | nighthogbr.com
+    pinandpostco.com | thinksday.org | youtube.com/@jordanjtupper
+    Booking: david@cover6band.com
+  -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
 
@@ -61,7 +75,9 @@
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 html { scroll-behavior: smooth; font-size: 16px; }
+
 body {
   background: var(--black);
   color: var(--white);
@@ -69,9 +85,11 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
 }
+
 a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; object-fit: cover; }
 ul { list-style: none; }
+
 .red { color: var(--red); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
@@ -102,10 +120,7 @@ ul { list-style: none; }
   font-size: 2rem;
   letter-spacing: 0.05em;
   color: var(--white);
-  display: flex;
-  align-items: center;
 }
-.nav-logo-img { height: 48px; width: auto; }
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -159,10 +174,32 @@ ul { list-style: none; }
   inset: 0;
   background: var(--black);
 }
-.hero-stripe { position: absolute; background: var(--red); opacity: 0.06; }
-.hero-stripe--1 { width: 3px; height: 100%; top: 0; left: 18%; transform: skewX(-8deg); }
-.hero-stripe--2 { width: 120px; height: 100%; top: 0; right: 0; background: linear-gradient(to left, var(--red), transparent); opacity: 0.08; }
-.hero-stripe--3 { width: 100%; height: 3px; bottom: 30%; left: 0; background: linear-gradient(to right, transparent, var(--red), transparent); opacity: 0.12; }
+.hero-stripe {
+  position: absolute;
+  background: var(--red);
+  opacity: 0.06;
+}
+.hero-stripe--1 {
+  width: 3px;
+  height: 100%;
+  top: 0; left: 18%;
+  transform: skewX(-8deg);
+}
+.hero-stripe--2 {
+  width: 120px;
+  height: 100%;
+  top: 0; right: 0;
+  background: linear-gradient(to left, var(--red), transparent);
+  opacity: 0.08;
+}
+.hero-stripe--3 {
+  width: 100%;
+  height: 3px;
+  bottom: 30%;
+  left: 0;
+  background: linear-gradient(to right, transparent, var(--red), transparent);
+  opacity: 0.12;
+}
 .hero-noise {
   position: absolute;
   inset: 0;
@@ -170,6 +207,7 @@ ul { list-style: none; }
   opacity: 0.03;
   pointer-events: none;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -186,7 +224,11 @@ ul { list-style: none; }
   margin-bottom: 1rem;
   animation: fadeUp 0.8s ease both;
 }
-.hero-title { font-family: var(--font-display); line-height: 0.85; margin-bottom: 0.5rem; }
+.hero-title {
+  font-family: var(--font-display);
+  line-height: 0.85;
+  margin-bottom: 0.5rem;
+}
 .hero-title-cover {
   display: block;
   font-size: clamp(6rem, 18vw, 16rem);
@@ -238,15 +280,24 @@ ul { list-style: none; }
   transition: all 0.2s;
   clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
-.btn--red { background: var(--red); color: var(--white); }
+.btn--red {
+  background: var(--red);
+  color: var(--white);
+}
 .btn--red:hover { background: var(--red-dark); transform: translateY(-2px); }
-.btn--outline { background: transparent; color: var(--white); border: 2px solid var(--white); clip-path: none; }
+.btn--outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  clip-path: none;
+}
 .btn--outline:hover { background: var(--white); color: var(--black); }
 .btn--full { width: 100%; text-align: center; }
 
 /* ── SECTION SHARED ── */
 .section { padding: 6rem 0; }
 .section--dark { background: var(--black-mid); }
+
 .section-label {
   font-family: var(--font-cond);
   font-size: 0.8rem;
@@ -266,8 +317,17 @@ ul { list-style: none; }
 .section-header { text-align: center; margin-bottom: 3.5rem; }
 
 /* ── ABOUT ── */
-.about-grid { display: grid; grid-template-columns: 1fr; gap: 5rem; align-items: center; }
-.about-text p { color: var(--white-dim); margin-bottom: 1.25rem; font-size: 1.05rem; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-text p {
+  color: var(--white-dim);
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
 .about-stats {
   display: flex;
   gap: 2.5rem;
@@ -276,13 +336,31 @@ ul { list-style: none; }
   border-top: 1px solid #222;
 }
 .stat { display: flex; flex-direction: column; }
-.stat-num { font-family: var(--font-display); font-size: 3rem; line-height: 1; }
-.stat-label { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-dim); }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+}
+.stat-label {
+  font-family: var(--font-cond);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
 
 /* ── BAND MEMBERS ── */
-.members-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
 .member-card { text-align: center; }
-.member-photo-wrap { position: relative; margin-bottom: 1rem; overflow: hidden; }
+.member-photo-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
 .member-photo-wrap img {
   width: 100%;
   aspect-ratio: 3/4;
@@ -290,10 +368,14 @@ ul { list-style: none; }
   filter: grayscale(100%);
   transition: filter 0.4s, transform 0.4s;
 }
-.member-card:hover .member-photo-wrap img { filter: grayscale(0%); transform: scale(1.04); }
+.member-card:hover .member-photo-wrap img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
 .member-number {
   position: absolute;
-  top: 0.75rem; left: 0.75rem;
+  top: 0.75rem;
+  left: 0.75rem;
   font-family: var(--font-display);
   font-size: 1.1rem;
   color: var(--red);
@@ -310,13 +392,24 @@ ul { list-style: none; }
   color: var(--white);
   margin-bottom: 0.3rem;
 }
-.member-role { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); }
+.member-role {
+  font-family: var(--font-cond);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+/* ── MEMBER LINKS (new) ── */
 .member-links { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.25rem; align-items: center; }
 .member-links a { font-family: var(--font-cond); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--red); transition: opacity 0.2s; }
 .member-links a:hover { opacity: 0.75; }
 
 /* ── VIDEOS ── */
-.videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
 .video-wrap {
   position: relative;
   padding-top: 56.25%;
@@ -326,11 +419,23 @@ ul { list-style: none; }
   transition: border-color 0.3s;
 }
 .video-wrap:hover { border-color: var(--red); }
-.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* ── BOOKING ── */
-.book { position: relative; overflow: hidden; }
-.book-bg { position: absolute; inset: 0; background: var(--black); }
+.book {
+  position: relative;
+  overflow: hidden;
+}
+.book-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--black);
+}
 .book-noise {
   position: absolute;
   inset: 0;
@@ -346,8 +451,15 @@ ul { list-style: none; }
   gap: 5rem;
   align-items: start;
 }
-.book-text p { color: var(--white-dim); margin-bottom: 2rem; }
-.book-contact { display: flex; flex-direction: column; gap: 0.85rem; }
+.book-text p {
+  color: var(--white-dim);
+  margin-bottom: 2rem;
+}
+.book-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
 .contact-link {
   font-family: var(--font-cond);
   font-size: 1rem;
@@ -390,29 +502,83 @@ ul { list-style: none; }
 }
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus { border-color: var(--red); border-bottom-color: var(--red); }
+.form-group textarea:focus {
+  border-color: var(--red);
+  border-bottom-color: var(--red);
+}
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #444; }
+.form-group textarea::placeholder {
+  color: #444;
+}
 .form-group select option { background: var(--black-soft); }
 .form-group textarea { resize: vertical; }
 
 /* ── FOOTER ── */
-.footer { background: var(--black-mid); border-top: 3px solid var(--red); padding: 3rem 0; text-align: center; }
+.footer {
+  background: var(--black-mid);
+  border-top: 3px solid var(--red);
+  padding: 3rem 0;
+  text-align: center;
+}
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
-.footer-logo { font-family: var(--font-display); font-size: 2.5rem; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-.footer-logo-img { height: 120px; width: auto; }
-.footer-tagline { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--white-dim); }
-.footer-location { font-size: 0.85rem; color: #555; font-family: var(--font-cond); letter-spacing: 0.15em; text-transform: uppercase; }
-.footer-links { display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem; }
-.footer-links a { font-family: var(--font-cond); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; color: var(--white-dim); text-transform: uppercase; transition: color 0.2s; }
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+.footer-tagline {
+  font-family: var(--font-cond);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+}
+.footer-location {
+  font-size: 0.85rem;
+  color: #555;
+  font-family: var(--font-cond);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.footer-links a {
+  font-family: var(--font-cond);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
 .footer-links a:hover { color: var(--red); }
 .footer-divider { color: #333; }
-.footer-copy { font-size: 0.75rem; color: #444; margin-top: 0.5rem; font-family: var(--font-cond); letter-spacing: 0.1em; }
+.footer-copy {
+  font-size: 0.75rem;
+  color: #444;
+  margin-top: 0.5rem;
+  font-family: var(--font-cond);
+  letter-spacing: 0.1em;
+}
 
 /* ── SCROLL REVEAL ── */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal--right { transform: translateX(30px); }
-.reveal.visible { opacity: 1; transform: none; }
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal--right {
+  transform: translateX(30px);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
 
 /* ── KEYFRAMES ── */
 @keyframes fadeUp {
@@ -420,29 +586,71 @@ ul { list-style: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── LOGO BLEND FIX ── */
-.hero-logo-img img,
-.nav-logo-img,
-.footer-logo-img {
-  mix-blend-mode: screen;
-  background: transparent;
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .members-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    background: var(--black-mid);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 3px solid var(--red);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.2rem; }
+  .nav-cta { text-align: center; clip-path: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .videos-grid { grid-template-columns: 1fr; }
+  .photos-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .photo-item--large { grid-column: auto; grid-row: auto; }
+  .book-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .section { padding: 4rem 0; }
+}
+
+@media (max-width: 480px) {
+  .members-grid { grid-template-columns: repeat(2, 1fr); }
+  .photos-grid { grid-template-columns: 1fr; }
+  .about-stats { gap: 1.5rem; }
+}
+
 .nav-logo { display: flex; align-items: center; }
+.nav-logo-img { height: 48px; width: auto; }
 .hero-logo-img { margin: 0 auto 1.5rem; max-width: 340px; width: 70vw; }
 .hero-logo-img img { width: 100%; height: auto; }
+.footer-logo-img { height: 120px; width: auto; }
 
 /* ── SOCIAL ICONS ── */
-.footer-social { display: flex; gap: 1.25rem; align-items: center; justify-content: center; margin-bottom: 0.75rem; }
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px; height: 44px;
+  width: 44px;
+  height: 44px;
   border: 1px solid #2a2a2a;
   color: var(--white-dim);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-.social-link:hover { color: var(--white); border-color: var(--red); background: rgba(224,26,26,0.08); }
+.social-link:hover {
+  color: var(--white);
+  border-color: var(--red);
+  background: rgba(224,26,26,0.08);
+}
 
 .footer-network {
   display: flex;
@@ -453,14 +661,38 @@ ul { list-style: none; }
   padding-top: 0.75rem;
   border-top: 1px solid #1e1e1e;
 }
-.footer-network a { font-family: var(--font-cond); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: lowercase; color: #444; transition: color 0.2s; }
+.footer-network a {
+  font-family: var(--font-cond);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: #444;
+  transition: color 0.2s;
+}
 .footer-network a:hover { color: var(--red); }
 
 /* ── SOCIAL FEED ── */
 .social { background: var(--black); }
-.social-feed-wrap { display: flex; justify-content: center; margin-bottom: 2rem; min-height: 620px; }
-.social-feed-wrap .fb-page { border: 1px solid #1e1e1e; max-width: 500px; width: 100%; }
+.social-feed-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  min-height: 620px;
+}
+.social-feed-wrap .fb-page {
+  border: 1px solid #1e1e1e;
+  max-width: 500px;
+  width: 100%;
+}
 .social-fb-link { text-align: center; }
+
+/* ── LOGO BLEND FIX ── */
+.hero-logo-img img,
+.nav-logo-img,
+.footer-logo-img {
+  mix-blend-mode: screen;
+  background: transparent;
+}
 
 /* ── GIG CALENDAR ── */
 .gigs-list {
@@ -491,48 +723,62 @@ ul { list-style: none; }
   padding: 0.4rem 0.6rem;
   min-width: 72px;
 }
-.gig-month { font-family: var(--font-cond); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); }
-.gig-day { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: var(--white); }
-.gig-year { font-family: var(--font-cond); font-size: 0.7rem; letter-spacing: 0.15em; color: #555; }
-.gig-venue { font-family: var(--font-cond); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); margin-bottom: 0.1rem; }
-.gig-location { font-family: var(--font-cond); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 0; }
-.gig-details { font-size: 0.82rem; color: #555; font-family: var(--font-cond); letter-spacing: 0.08em; }
-.gigs-empty { text-align: center; padding: 3rem 0 1rem; font-family: var(--font-cond); font-size: 1rem; letter-spacing: 0.08em; color: #555; display: none; }
-.gigs-empty a { color: var(--red); text-decoration: underline; }
-.gigs-cta { text-align: center; padding: 1.5rem 0 0; font-family: var(--font-cond); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white-dim); }
-.gigs-cta a { color: var(--red); font-weight: 700; transition: opacity 0.2s; }
-.gigs-cta a:hover { opacity: 0.75; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .members-grid { grid-template-columns: repeat(3, 1fr); }
+.gig-month {
+  font-family: var(--font-cond);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
 }
+.gig-day {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--white);
+}
+.gig-year {
+  font-family: var(--font-cond);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #555;
+}
+.gig-venue {
+  font-family: var(--font-cond);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.1rem;
+}
+.gig-location {
+  font-family: var(--font-cond);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: 0;
+}
+.gig-details {
+  font-size: 0.82rem;
+  color: #555;
+  font-family: var(--font-cond);
+  letter-spacing: 0.08em;
+}
+.gigs-empty {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  font-family: var(--font-cond);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #555;
+  display: none;
+}
+.gigs-empty a { color: var(--red); text-decoration: underline; }
+
 @media (max-width: 900px) {
   .gigs-list { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  .nav-toggle { display: flex; }
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: var(--nav-h); left: 0; right: 0;
-    background: var(--black-mid);
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    border-bottom: 3px solid var(--red);
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
-  .nav-cta { text-align: center; clip-path: none; }
-  .about-grid { grid-template-columns: 1fr; }
-  .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .videos-grid { grid-template-columns: 1fr; }
-  .photos-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-  .photo-item--large { grid-column: auto; grid-row: auto; }
-  .book-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .form-row { grid-template-columns: 1fr; }
-  .section { padding: 4rem 0; }
 }
 @media (max-width: 600px) {
   .gigs-list { grid-template-columns: 1fr; border-left: none; }
@@ -540,11 +786,17 @@ ul { list-style: none; }
   .gig-date { min-width: 60px; }
   .gig-day { font-size: 2rem; }
 }
-@media (max-width: 480px) {
-  .members-grid { grid-template-columns: repeat(2, 1fr); }
-  .photos-grid { grid-template-columns: 1fr; }
-  .about-stats { gap: 1.5rem; }
+
+.gigs-cta {
+  text-align: center;
+  padding: 1.5rem 0 0;
+  font-family: var(--font-cond);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--white-dim);
 }
+.gigs-cta a { color: var(--red); font-weight: 700; transition: opacity 0.2s; }
+.gigs-cta a:hover { opacity: 0.75; }
   </style>
 
   <!-- Schema.org Structured Data -->
@@ -599,7 +851,7 @@ ul { list-style: none; }
       { "@type": "MusicGroup", "name": "Cover 6", "url": "https://www.cover6band.com" },
       { "@type": "MusicGroup", "name": "Night Hog", "url": "https://nighthogbr.com" }
     ],
-    "sameAs": ["https://nighthogbr.com","https://www.cover6band.com","https://www.youtube.com/@jordanjtupper","https://www.facebook.com/profile.php?id=61586946814825","https://jordantupper.com","https://jordantuppermusic.com","https://pinandpostco.com","https://thinksday.org"]
+    "sameAs": ["https://nighthogbr.com","https://www.cover6band.com","https://www.youtube.com/@jordanjtupper","https://www.facebook.com/profile.php?id=61586946814825","https://jordantupper.com","https://jordantuppermusic.com","https://nighthogbr.com","https://pinandpostco.com","https://thinksday.org"]
   }
   </script>
 
@@ -636,7 +888,7 @@ ul { list-style: none; }
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Cover 6 Band Live Performance",
-    "description": "Cover 6 Band performs live rock anthems and danceable grooves — hits from the 70s to today.",
+    "description": "Cover 6 Band performs live rock anthems and danceable grooves — hits from the 70s to today. Featuring Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums.",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventSchedule": { "@type": "Schedule", "scheduleTimezone": "America/Chicago", "repeatFrequency": "P1M", "startDate": "2026-01-01" },
@@ -656,6 +908,7 @@ ul { list-style: none; }
     "alternateName": "Cover 6",
     "url": "https://www.cover6band.com",
     "description": "Cover 6 is a five-piece live cover band based in Baton Rouge, Louisiana. Featuring Jordan Tupper on bass and vocals, Cover 6 performs rock anthems and danceable grooves — hits from the 70s to today — for bars, festivals, corporate events, and private parties across Louisiana.",
+    "telephone": "",
     "email": "david@cover6band.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Baton Rouge", "addressRegion": "LA", "postalCode": "70801", "addressCountry": "US" },
     "geo": { "@type": "GeoCoordinates", "latitude": 30.4515, "longitude": -91.1871 },
@@ -679,7 +932,7 @@ ul { list-style: none; }
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Cover 6 Band Live Performance Videos",
-    "description": "Live performance videos featuring Cover 6 Band — Baton Rouge Louisiana cover band.",
+    "description": "Live performance videos featuring Cover 6 Band — Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums. Baton Rouge Louisiana cover band.",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "url": "https://www.youtube.com/watch?v=NK4ik3AuEKk" },
       { "@type": "ListItem", "position": 2, "url": "https://www.youtube.com/watch?v=VqCDIThWpRk" },
@@ -1073,8 +1326,8 @@ ul { list-style: none; }
   </script>
 
   <script>
-// ── GIG DATA ──
-// Add/remove gigs here. Past dates are hidden automatically.
+// ── GIG DATA — edit this array to add/remove gigs ──
+// Past dates are hidden automatically every day.
 const GIGS = [
   { year: 2026, month: 6,  day: 20, venue: "Reno's on the River",   location: "Louisiana",          time: "3pm – 6pm" },
   { year: 2026, month: 7,  day:  4, venue: "Phil Brady's",           location: "Baton Rouge, LA",    time: "8:30pm – ?" },
@@ -1093,17 +1346,10 @@ const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV
 (function renderGigs() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-
   const upcoming = GIGS.filter(g => new Date(g.year, g.month - 1, g.day) >= today);
-
   const list  = document.getElementById('gigsList');
   const empty = document.getElementById('gigsEmpty');
-
-  if (!upcoming.length) {
-    empty.style.display = 'block';
-    return;
-  }
-
+  if (!upcoming.length) { empty.style.display = 'block'; return; }
   upcoming.forEach(g => {
     const row = document.createElement('div');
     row.className = 'gig-row reveal';
@@ -1120,8 +1366,6 @@ const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV
       </div>`;
     list.appendChild(row);
   });
-
-  // Observe newly injected gig rows for scroll reveal
   document.querySelectorAll('.gig-row.reveal').forEach(el => revealObserver.observe(el));
 })();
 
@@ -1147,10 +1391,15 @@ navToggle.addEventListener('click', () => {
     spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   }
 });
+
+// Close nav when link clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    navToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    navToggle.querySelectorAll('span').forEach(s => {
+      s.style.transform = '';
+      s.style.opacity = '';
+    });
   });
 });
 
@@ -1159,7 +1408,9 @@ const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
       revealObserver.unobserve(entry.target);
     }
   });
@@ -1172,12 +1423,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ── FORM SUBMIT FEEDBACK ──
 const form = document.querySelector('.form');
 if (form) {
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', async (e) => {
     const btn = form.querySelector('button[type="submit"]');
-    const orig = btn.textContent;
+    const originalText = btn.textContent;
     btn.textContent = 'Sending…';
     btn.disabled = true;
-    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 4000);
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }, 4000);
   });
 }
   </script>
