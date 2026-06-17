@@ -719,6 +719,26 @@ ul { list-style: none; }
 }
 
 
+
+/* ── MEMBER LINKS ── */
+.member-links {
+  margin-top: 0.55rem;
+  font-family: var(--font-cond);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  line-height: 1.45;
+}
+.member-links a {
+  color: var(--red);
+  transition: opacity 0.2s;
+}
+.member-links a:hover { opacity: 0.75; }
+.member-links span {
+  color: #555;
+  margin: 0 0.25rem;
+}
+
 /* ── GIG CALENDAR ── */
 .gigs-list {
   display: grid;
@@ -883,12 +903,12 @@ ul { list-style: none; }
       {
         "@type": "OrganizationRole",
         "roleName": "Lead Vocals",
-        "member": { "@type": "Person", "name": "David Martin" }
+        "member": { "@type": "Person", "name": "David Martin", "sameAs": ["https://soundcloud.com/david-c-martin"] }
       },
       {
         "@type": "OrganizationRole",
         "roleName": "Lead Guitar",
-        "member": { "@type": "Person", "name": "Sam Jeter" }
+        "member": { "@type": "Person", "name": "Sam Jeter", "sameAs": ["https://www.youtube.com/@samjetermusic8102"] }
       },
       {
         "@type": "OrganizationRole",
@@ -1323,20 +1343,7 @@ ul { list-style: none; }
       </div>
       <div class="gigs-list">
 
-        <div class="gig-row reveal">
-          <div class="gig-date">
-            <span class="gig-month">JUN</span>
-            <span class="gig-day">05</span>
-            <span class="gig-year">2026</span>
-          </div>
-          <div class="gig-info">
-            <h3 class="gig-venue">Papi's</h3>
-            <p class="gig-location">Baton Rouge, LA</p>
-            <p class="gig-details">6pm – 9pm</p>
-          </div>
-        </div>
-
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-06-20">
           <div class="gig-date">
             <span class="gig-month">JUN</span>
             <span class="gig-day">20</span>
@@ -1349,7 +1356,20 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-07-04">
+          <div class="gig-date">
+            <span class="gig-month">JUL</span>
+            <span class="gig-day">04</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Phil Brady's</h3>
+            <p class="gig-location">Baton Rouge, LA</p>
+            <p class="gig-details">8:30pm</p>
+          </div>
+        </div>
+
+        <div class="gig-row reveal" data-date="2026-07-18">
           <div class="gig-date">
             <span class="gig-month">JUL</span>
             <span class="gig-day">18</span>
@@ -1362,7 +1382,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-07-31">
           <div class="gig-date">
             <span class="gig-month">JUL</span>
             <span class="gig-day">31</span>
@@ -1375,7 +1395,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-08-01">
           <div class="gig-date">
             <span class="gig-month">AUG</span>
             <span class="gig-day">01</span>
@@ -1388,7 +1408,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-08-08">
           <div class="gig-date">
             <span class="gig-month">AUG</span>
             <span class="gig-day">08</span>
@@ -1401,7 +1421,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-08-15">
           <div class="gig-date">
             <span class="gig-month">AUG</span>
             <span class="gig-day">15</span>
@@ -1414,7 +1434,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-08-22">
           <div class="gig-date">
             <span class="gig-month">AUG</span>
             <span class="gig-day">22</span>
@@ -1427,7 +1447,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-08-29">
           <div class="gig-date">
             <span class="gig-month">AUG</span>
             <span class="gig-day">29</span>
@@ -1440,7 +1460,7 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="gig-row reveal">
+        <div class="gig-row reveal" data-date="2026-09-18">
           <div class="gig-date">
             <span class="gig-month">SEP</span>
             <span class="gig-day">18</span>
@@ -1455,6 +1475,10 @@ ul { list-style: none; }
 
         <!-- PASTE NEW GIG ROWS ABOVE THIS LINE -->
 
+      </div>
+
+      <div class="gigs-empty">
+        <p>No public gigs currently listed. <a href="#book">Contact us for booking availability.</a></p>
       </div>
 
       <div class="gigs-cta reveal">
@@ -1481,6 +1505,7 @@ ul { list-style: none; }
           <div class="member-info">
             <h3>David Martin</h3>
             <p class="member-role"><span class="red">&#9632;</span> Lead Vocals</p>
+            <p class="member-links"><a href="https://soundcloud.com/david-c-martin" target="_blank" rel="noopener noreferrer">soundcloud.com/david-c-martin</a></p>
           </div>
         </div>
 
@@ -1492,6 +1517,7 @@ ul { list-style: none; }
           <div class="member-info">
             <h3>Sam Jeter</h3>
             <p class="member-role"><span class="red">&#9632;</span> Lead Guitar</p>
+            <p class="member-links"><a href="https://www.youtube.com/@samjetermusic8102" target="_blank" rel="noopener noreferrer">youtube.com/@samjetermusic8102</a></p>
           </div>
         </div>
 
@@ -1514,7 +1540,13 @@ ul { list-style: none; }
           <div class="member-info">
             <h3><a href="https://jordantupper.com" style="color:inherit;text-decoration:none;">Jordan Tupper</a></h3>
             <p class="member-role"><span class="red">&#9632;</span> Bass / Vocals</p>
-            <p class="member-bio" style="font-size:0.82rem;color:#999;margin-top:6px;line-height:1.4;">Baton Rouge musician &amp; 2024 Grammy Music Educator Award Quarterfinalist. Also performs with <a href="https://nighthogbr.com" style="color:#e01a1a;text-decoration:none;">Night Hog</a> and <a href="https://batonrougejazz.com" style="color:#e01a1a;text-decoration:none;">Jim Standley Jazz</a>.</p>
+            <p class="member-links">
+              <a href="https://nighthogbr.com" target="_blank" rel="noopener noreferrer">nighthogbr.com</a>
+              <span>|</span>
+              <a href="https://batonrougejazz.com" target="_blank" rel="noopener noreferrer">batonrougejazz.com</a>
+              <span>|</span>
+              <a href="https://jordantupper.com" target="_blank" rel="noopener noreferrer">jordantupper.com</a>
+            </p>
           </div>
         </div>
 
@@ -1760,6 +1792,29 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => revealObserver.observe(el));
+
+
+// ── AUTO-HIDE PAST GIGS ──
+// Add data-date="YYYY-MM-DD" to each .gig-row. Past dates are hidden automatically.
+const gigRows = Array.from(document.querySelectorAll('.gig-row[data-date]'));
+const gigsEmpty = document.querySelector('.gigs-empty');
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+gigRows
+  .sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date))
+  .forEach(row => {
+    const gigDate = new Date(`${row.dataset.date}T23:59:59`);
+    if (gigDate < today) {
+      row.remove();
+    } else {
+      document.querySelector('.gigs-list').appendChild(row);
+    }
+  });
+
+if (gigsEmpty && document.querySelectorAll('.gig-row[data-date]').length === 0) {
+  gigsEmpty.style.display = 'block';
+}
 
 // ── FOOTER YEAR ──
 document.getElementById('year').textContent = new Date().getFullYear();
