@@ -267,10 +267,6 @@ ul { list-style: none; }
   animation: fadeUp 0.8s 0.5s ease both;
 }
 
-
-
-
-
 /* ── BUTTONS ── */
 .btn {
   display: inline-block;
@@ -352,9 +348,6 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: var(--white-dim);
 }
-
-
-
 
 /* ── BAND MEMBERS ── */
 .members-grid {
@@ -589,13 +582,9 @@ ul { list-style: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-  50%       { opacity: 1;   transform: scaleY(1.15); }
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .members-grid { grid-template-columns: repeat(3, 1fr); }
-  
 }
 
 @media (max-width: 768px) {
@@ -615,7 +604,6 @@ ul { list-style: none; }
   .nav-cta { text-align: center; clip-path: none; }
 
   .about-grid { grid-template-columns: 1fr; }
-  
 
   .members-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
@@ -639,13 +627,11 @@ ul { list-style: none; }
   .about-stats { gap: 1.5rem; }
 }
 
-
 .nav-logo { display: flex; align-items: center; }
 .nav-logo-img { height: 48px; width: auto; }
 .hero-logo-img { margin: 0 auto 1.5rem; max-width: 340px; width: 70vw; }
 .hero-logo-img img { width: 100%; height: auto; }
 .footer-logo-img { height: 120px; width: auto; }
-
 
 /* ── SOCIAL ICONS ── */
 .footer-social {
@@ -671,7 +657,6 @@ ul { list-style: none; }
   background: rgba(224,26,26,0.08);
 }
 
-
 .footer-network {
   display: flex;
   flex-wrap: wrap;
@@ -691,7 +676,6 @@ ul { list-style: none; }
 }
 .footer-network a:hover { color: var(--red); }
 
-
 /* ── SOCIAL FEED ── */
 .social { background: var(--black); }
 .social-feed-wrap {
@@ -709,7 +693,6 @@ ul { list-style: none; }
   text-align: center;
 }
 
-
 /* ── LOGO BLEND FIX ── */
 .hero-logo-img img,
 .nav-logo-img,
@@ -717,8 +700,6 @@ ul { list-style: none; }
   mix-blend-mode: screen;
   background: transparent;
 }
-
-
 
 /* ── MEMBER LINKS ── */
 .member-links {
@@ -821,7 +802,7 @@ ul { list-style: none; }
   font-size: 1rem;
   letter-spacing: 0.08em;
   color: #555;
-  display: none; /* hidden by default — show if no gig rows exist */
+  display: none;
 }
 .gigs-empty a { color: var(--red); text-decoration: underline; }
 
@@ -839,7 +820,6 @@ ul { list-style: none; }
   .gig-day { font-size: 2rem; }
 }
 
-
 .gigs-cta {
   text-align: center;
   padding: 1.5rem 0 0;
@@ -854,7 +834,6 @@ ul { list-style: none; }
   transition: opacity 0.2s;
 }
 .gigs-cta a:hover { opacity: 0.75; }
-
 </style>
 
   <!-- Schema.org Structured Data -->
@@ -1021,45 +1000,16 @@ ul { list-style: none; }
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.cover6band.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Cover 6",
-        "item": "https://www.cover6band.com/#about"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "The Band",
-        "item": "https://www.cover6band.com/#band"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Videos",
-        "item": "https://www.cover6band.com/#videos"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "Photos",
-        "item": "https://www.cover6band.com/#photos"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "name": "Book Cover 6",
-        "item": "https://www.cover6band.com/#book"
-      }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cover6band.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About Cover 6", "item": "https://www.cover6band.com/#about" },
+      { "@type": "ListItem", "position": 3, "name": "The Band", "item": "https://www.cover6band.com/#band" },
+      { "@type": "ListItem", "position": 4, "name": "Videos", "item": "https://www.cover6band.com/#videos" },
+      { "@type": "ListItem", "position": 5, "name": "Photos", "item": "https://www.cover6band.com/#photos" },
+      { "@type": "ListItem", "position": 6, "name": "Book Cover 6", "item": "https://www.cover6band.com/#book" }
     ]
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1104,6 +1054,7 @@ ul { list-style: none; }
     }
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1161,40 +1112,17 @@ ul { list-style: none; }
     "name": "Cover 6 Band Live Performance Videos",
     "description": "Live performance videos featuring Cover 6 Band — Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums. Baton Rouge Louisiana cover band.",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://www.youtube.com/watch?v=NK4ik3AuEKk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://www.youtube.com/watch?v=VqCDIThWpRk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://www.youtube.com/watch?v=wTTwGUUn_Xg"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://www.youtube.com/watch?v=Z2GKvMR4394"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://www.youtube.com/watch?v=kI4KoQ8hM-M"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://www.youtube.com/watch?v=Ia51PZuwa-U"
-      }
+      { "@type": "ListItem", "position": 1, "url": "https://www.youtube.com/watch?v=NK4ik3AuEKk" },
+      { "@type": "ListItem", "position": 2, "url": "https://www.youtube.com/watch?v=VqCDIThWpRk" },
+      { "@type": "ListItem", "position": 3, "url": "https://www.youtube.com/watch?v=wTTwGUUn_Xg" },
+      { "@type": "ListItem", "position": 4, "url": "https://www.youtube.com/watch?v=Z2GKvMR4394" },
+      { "@type": "ListItem", "position": 5, "url": "https://www.youtube.com/watch?v=kI4KoQ8hM-M" },
+      { "@type": "ListItem", "position": 6, "url": "https://www.youtube.com/watch?v=Ia51PZuwa-U" }
     ]
   }
   </script>
-<!-- Google tag (gtag.js) -->
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR4MR0K9W1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -1211,42 +1139,27 @@ ul { list-style: none; }
       {
         "@type": "Question",
         "name": "What kind of music does Cover 6 Band play?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band plays rock anthems and danceable grooves spanning five decades — hits from the 70s to today, including classic rock, pop rock, funk, and soul."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Cover 6 Band plays rock anthems and danceable grooves spanning five decades — hits from the 70s to today, including classic rock, pop rock, funk, and soul." }
       },
       {
         "@type": "Question",
         "name": "Who are the members of Cover 6 Band?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band is a five-piece group featuring Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Cover 6 Band is a five-piece group featuring Jordan Tupper on bass and vocals, David Martin on lead vocals, Sam Jeter on lead guitar, Nick Fehn on rhythm guitar, and Coty on drums." }
       },
       {
         "@type": "Question",
         "name": "Who is Jordan Tupper?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Jordan Tupper is a Baton Rouge-based musician, bassist, vocalist, and music educator. He is a 2024 Grammy Music Educator Award Quarterfinalist and performs with Cover 6 Band, Night Hog, and Jim Standley Jazz."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Jordan Tupper is a Baton Rouge-based musician, bassist, vocalist, and music educator. He is a 2024 Grammy Music Educator Award Quarterfinalist and performs with Cover 6 Band, Night Hog, and Standley, Tupper & Petersen." }
       },
       {
         "@type": "Question",
         "name": "Where is Cover 6 Band based?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cover 6 Band is based in Baton Rouge, Louisiana, and performs at venues, festivals, corporate events, and private parties across Louisiana and the surrounding region."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "Cover 6 Band is based in Baton Rouge, Louisiana, and performs at venues, festivals, corporate events, and private parties across Louisiana and the surrounding region." }
       },
       {
         "@type": "Question",
         "name": "How do I book Cover 6 Band?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can book Cover 6 Band by emailing david@cover6band.com or using the booking form at cover6band.com."
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": "You can book Cover 6 Band by emailing david@cover6band.com or using the booking form at cover6band.com." }
       }
     ]
   }
@@ -1301,7 +1214,6 @@ ul { list-style: none; }
         <a href="#videos" class="btn btn--outline">Watch Us Play</a>
       </div>
     </div>
-  </div>
   </section>
 
   <!-- ABOUT -->
@@ -1311,7 +1223,7 @@ ul { list-style: none; }
         <div class="about-text reveal">
           <p class="section-label">About the Band</p>
           <h2 class="section-title">Five Players.<br><span class="red">One Sound.</span></h2>
-          <p>Cover 6 is a five-piece live cover band from the Baton Rouge area, playing rock, pop, funk, soul, and crowd favorites from the 70s to today. The band features <strong>David Martin</strong> on lead vocals, <strong>Sam Jeter</strong> on lead guitar, <Strong>Nick Fehn</Strong> on rhythm guitar, <strong>Jordan Tupper</strong> on bass and vocals, and Coty on drums.</p>
+          <p>Cover 6 is a five-piece live cover band from the Baton Rouge area, playing rock, pop, funk, soul, and crowd favorites from the 70s to today. The band features <strong>David Martin</strong> on lead vocals, <strong>Sam Jeter</strong> on lead guitar, <strong>Nick Fehn</strong> on rhythm guitar, <strong>Jordan Tupper</strong> on bass and vocals, and Coty on drums.</p>
           <p>From classic rock anthems to the hits you're dancing to right now, Cover 6 covers five decades of the best music ever made. Whether you're booking a festival, a corporate event, a bar night, or a private party, one thing is guaranteed: the room will move. We've got you covered.</p>
           <div class="about-stats">
             <div class="stat">
@@ -1327,8 +1239,6 @@ ul { list-style: none; }
               <span class="stat-label">Mission</span>
             </div>
           </div>
-        </div>
-        </div>
         </div>
       </div>
     </div>
@@ -1353,6 +1263,19 @@ ul { list-style: none; }
             <h3 class="gig-venue">Reno's on the River</h3>
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">3pm – 6pm</p>
+          </div>
+        </div>
+
+        <div class="gig-row reveal" data-date="2026-07-03">
+          <div class="gig-date">
+            <span class="gig-month">JUL</span>
+            <span class="gig-day">03</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Tequila's</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">6pm – 9pm</p>
           </div>
         </div>
 
@@ -1418,6 +1341,19 @@ ul { list-style: none; }
             <h3 class="gig-venue">Sun Outdoors RV Resort</h3>
             <p class="gig-location">Louisiana</p>
             <p class="gig-details">TBA</p>
+          </div>
+        </div>
+
+        <div class="gig-row reveal" data-date="2026-08-14">
+          <div class="gig-date">
+            <span class="gig-month">AUG</span>
+            <span class="gig-day">14</span>
+            <span class="gig-year">2026</span>
+          </div>
+          <div class="gig-info">
+            <h3 class="gig-venue">Swamp Chicken</h3>
+            <p class="gig-location">Louisiana</p>
+            <p class="gig-details">9pm – 1am</p>
           </div>
         </div>
 
@@ -1592,7 +1528,8 @@ ul { list-style: none; }
           <iframe src="https://www.youtube.com/embed/Ia51PZuwa-U" title="Cover 6 Band Live Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- SOCIAL FEED -->
   <section id="social" class="social section">
@@ -1642,7 +1579,6 @@ ul { list-style: none; }
           </div>
         </div>
         <div class="book-form reveal reveal--right">
-          <!-- Replace mdavnegn with your Formspree endpoint -->
           <form action="https://formspree.io/f/mdavnegn" method="POST" class="form">
             <div class="form-row">
               <div class="form-group">
@@ -1698,15 +1634,12 @@ ul { list-style: none; }
       <p class="footer-tagline">We've Got You Covered</p>
       <address class="footer-location">Baton Rouge, Louisiana</address>
       <div class="footer-social">
-        <!-- Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61586946814825" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cover 6 on Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
         </a>
-        <!-- YouTube -->
         <a href="https://www.youtube.com/@jordanjtupper" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Jordan Tupper on YouTube">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
         </a>
-        <!-- Email -->
         <a href="mailto:david@cover6band.com" class="social-link" aria-label="Email Cover 6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
         </a>
@@ -1735,7 +1668,6 @@ ul { list-style: none; }
     </div>
   </footer>
 
-  
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
@@ -1767,7 +1699,6 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-// Close nav when link clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -1793,9 +1724,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-
 // ── AUTO-HIDE PAST GIGS ──
-// Add data-date="YYYY-MM-DD" to each .gig-row. Past dates are hidden automatically.
 const gigRows = Array.from(document.querySelectorAll('.gig-row[data-date]'));
 const gigsEmpty = document.querySelector('.gigs-empty');
 const today = new Date();
@@ -1827,16 +1756,12 @@ if (form) {
     const originalText = btn.textContent;
     btn.textContent = 'Sending…';
     btn.disabled = true;
-
-    // If using Formspree, let it handle naturally;
-    // this just gives visual feedback before page redirects.
     setTimeout(() => {
       btn.textContent = originalText;
       btn.disabled = false;
     }, 4000);
   });
 }
-
 </script>
 </body>
 </html>
